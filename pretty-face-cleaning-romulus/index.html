@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pretty Face Cleaning Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#3A1D39; --plum-soft:#5A3557; --lilac:#ECE3F1; --pearl:#FCFBFD;
+  --gold:#C29A2E; --slate:#4B4454;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--pearl);color:var(--slate);font-family:"Nunito Sans",system-ui,sans-serif;line-height:1.65;font-size:1.05rem;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+
+.nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+.logo{font-family:Marcellus,serif;font-size:1.3rem;color:var(--plum);text-decoration:none}
+.nav a.tel{font-weight:700;text-decoration:none;color:var(--plum)}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:50px 0 110px}
+.hero h1{font-family:Marcellus,serif;font-weight:400;font-size:clamp(2.7rem,5.6vw,4.7rem);line-height:1.04;color:var(--plum)}
+.hero .lede{margin-top:24px;font-size:1.18rem;max-width:38ch}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-block;background:var(--plum);color:var(--pearl);text-decoration:none;font-weight:700;padding:16px 30px;border-radius:999px}
+.btn:hover{background:var(--plum-soft)}
+.btn.line{background:transparent;color:var(--plum);border:1.5px solid var(--plum)}
+
+/* the checklist card */
+.list{background:var(--plum);color:var(--lilac);border-radius:200px 200px 18px 18px;padding:90px 48px 46px;position:relative}
+.list h2{font-family:Marcellus,serif;font-weight:400;font-size:1.6rem;color:var(--pearl);text-align:center}
+.list ul{list-style:none;margin-top:26px}
+.list li{display:flex;align-items:center;gap:16px;padding:13px 0;border-bottom:1px solid rgba(236,227,241,.16);font-size:1.08rem}
+.list li:last-child{border-bottom:0}
+.tick{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--gold);position:relative}
+.tick::after{content:"";position:absolute;left:8px;top:4px;width:6px;height:11px;border:solid var(--gold);border-width:0 2px 2px 0;transform:rotate(45deg) scale(0);animation:tick .35s ease-out forwards}
+.list li:nth-child(1) .tick::after{animation-delay:.3s}
+.list li:nth-child(2) .tick::after{animation-delay:.55s}
+.list li:nth-child(3) .tick::after{animation-delay:.8s}
+.list li:nth-child(4) .tick::after{animation-delay:1.05s}
+.list li:nth-child(5) .tick::after{animation-delay:1.3s}
+.list li:nth-child(6) .tick::after{animation-delay:1.55s}
+@keyframes tick{to{transform:rotate(45deg) scale(1)}}
+@media (prefers-reduced-motion:reduce){.tick::after{animation:none;transform:rotate(45deg)}}
+
+.reviews{background:var(--lilac);padding:110px 0}
+.reviews .grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:start}
+.score{font-family:Marcellus,serif;color:var(--plum)}
+.score b{display:block;font-weight:400;font-size:clamp(4.5rem,10vw,8rem);line-height:.9}
+.score span{display:block;font-family:"Nunito Sans";font-size:1rem;color:var(--slate);margin-top:12px}
+.quotes figure + figure{margin-top:46px;padding-top:46px;border-top:1px solid rgba(58,29,57,.15)}
+.quotes p{font-family:Marcellus,serif;font-size:clamp(1.4rem,2.4vw,1.95rem);line-height:1.35;color:var(--plum)}
+.quotes cite{display:block;margin-top:14px;font-style:normal;font-weight:700;color:var(--slate)}
+
+.how{padding:110px 0}
+.how h2,.book h2{font-family:Marcellus,serif;font-weight:400;font-size:clamp(2.1rem,4vw,3.2rem);line-height:1.1;color:var(--plum)}
+.plans{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid #DCD0E2;border-radius:18px;overflow:hidden}
+.plans div{padding:38px 32px;background:#fff}
+.plans div + div{border-left:1px solid #DCD0E2}
+.plans h3{font-family:Marcellus,serif;font-weight:400;font-size:1.5rem;color:var(--plum)}
+.plans p{margin-top:10px}
+
+.book{background:var(--plum);color:var(--lilac);padding:100px 0}
+.book h2{color:var(--pearl)}
+.book .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.book p{margin-top:16px;max-width:42ch}
+.book .btn{background:var(--gold);color:var(--plum)}
+.book .btn:hover{background:#D7B04A}
+.book .btn.line{background:transparent;color:var(--pearl);border-color:var(--lilac)}
+.hrs{width:100%;border-collapse:collapse;font-size:1.06rem}
+.hrs td{padding:15px 0;border-bottom:1px solid rgba(236,227,241,.2)}
+.hrs td:last-child{text-align:right;font-weight:700;color:var(--pearl)}
+footer{background:#2A1429;color:#B9A6B8;text-align:center;font-size:.82rem;padding:28px 0}
+
+@media (max-width:900px){
+  .hero,.reviews .grid,.book .grid{grid-template-columns:1fr;gap:44px}
+  .hero{padding:24px 0 72px}
+  .plans{grid-template-columns:1fr}
+  .plans div + div{border-left:0;border-top:1px solid #DCD0E2}
+  .reviews,.how,.book{padding:72px 0}
+}
+@media (max-width:480px){
+  .wrap{padding:0 20px}
+  .list{padding:70px 26px 34px;border-radius:160px 160px 16px 16px}
+  .logo{font-size:1.05rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav"><a class="logo" href="#">Pretty Face Cleaning</a><a class="tel" href="tel:+17347765024">(734) 776-5024</a></nav>
+  <section class="hero">
+    <div>
+      <h1>Come home to a place that feels put together.</h1>
+      <p class="lede">Pretty Face Cleaning Services cleans homes and businesses from Romulus, with an eye for the details most people skip.</p>
+      <div class="btns">
+        <a class="btn" href="tel:+17347765024">Book a cleaning</a>
+        <a class="btn line" href="#services">See services</a>
+      </div>
+    </div>
+    <div class="list">
+      <h2>On the list</h2>
+      <ul>
+        <li><span class="tick"></span>Homes &amp; apartments</li>
+        <li><span class="tick"></span>Offices &amp; commercial spaces</li>
+        <li><span class="tick"></span>Move-in &amp; move-out cleans</li>
+        <li><span class="tick"></span>Post-construction cleanup</li>
+        <li><span class="tick"></span>Windows &amp; baseboards</li>
+        <li><span class="tick"></span>Free estimates</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<section class="reviews">
+  <div class="wrap grid">
+    <div class="score"><b>5.0</b><span>Google rating from 26 reviews</span></div>
+    <div class="quotes">
+      <figure>
+        <p>“I am beyond satisfied with her work, she is very well priced and the attention to details is excellent…”</p>
+        <cite>Jai</cite>
+      </figure>
+      <figure>
+        <p>“She did an amazing job with great prices I will definitely be continuing services.”</p>
+        <cite>Christina</cite>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="services">
+  <div class="wrap">
+    <h2>Cleaning on your schedule</h2>
+    <div class="plans">
+      <div><h3>Weekly</h3><p>For busy households that want the house reset every week.</p></div>
+      <div><h3>Every two weeks</h3><p>A steady rhythm that keeps things under control between visits.</p></div>
+      <div><h3>Monthly or one-time</h3><p>A deep refresh, a move, or a space that needs catching up.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="book">
+  <div class="wrap grid">
+    <div>
+      <h2>Book your first clean</h2>
+      <p>Call to describe your space and get a free estimate. Based in Romulus, Michigan.</p>
+      <div class="btns">
+        <a class="btn" href="tel:+17347765024">Call (734) 776-5024</a>
+        <a class="btn line" href="https://www.facebook.com/Deshonna123/" target="_blank" rel="noopener">Message on Facebook</a>
+      </div>
+    </div>
+    <table class="hrs" aria-label="Hours">
+      <tr><td>Monday – Saturday</td><td>8 am – 8 pm</td></tr>
+      <tr><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+<footer><div class="wrap">Sample design prepared for Pretty Face Cleaning Services — not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>

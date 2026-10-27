@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imad's Electric Service, Dearborn Heights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,600;62..125,800&family=IBM+Plex+Sans:wght@400;500&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --concrete:#DCDDD9;
+  --concrete-2:#CBCDC8;
+  --ink:#15181C;
+  --steel:#A4A9AE;
+  --steel-dk:#6E7479;
+  --copper:#B8733C;
+  --copper-lt:#D99A63;
+  --paper:#F7F6F1;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--concrete);color:var(--ink);font-family:'IBM Plex Sans',sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.disp{font-family:'Archivo',sans-serif;font-stretch:72%;font-weight:800;line-height:.92;letter-spacing:-.005em}
+
+header.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:2px solid var(--ink)}
+.logo{font-family:'Archivo';font-stretch:115%;font-weight:600;font-size:18px;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo svg{width:22px;height:22px}
+.top .tel{font-family:'Archivo';font-stretch:90%;font-weight:600;font-size:18px;text-decoration:none;color:var(--copper)}
+
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;padding:76px 0 100px;align-items:center}
+.hero h1{font-size:clamp(64px,10vw,140px);text-transform:uppercase}
+.hero h1 .cu{display:block;color:var(--copper)}
+.hero p{font-size:20px;max-width:36ch;margin:28px 0 34px}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);font-family:'Archivo';font-stretch:100%;font-weight:600;font-size:17px;padding:17px 28px;text-decoration:none;border-radius:3px}
+.btn:hover{background:var(--copper)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:10px}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+
+/* panel */
+.panel{background:linear-gradient(160deg,#B8BDC2,#959BA0);border-radius:8px;padding:22px;box-shadow:0 30px 50px -30px rgba(21,24,28,.6),inset 0 1px 0 rgba(255,255,255,.5)}
+.panel .label{background:var(--paper);border-radius:3px;padding:10px 14px;display:flex;justify-content:space-between;font-family:'Archivo';font-stretch:90%;font-weight:600;font-size:13px;margin-bottom:16px}
+.breakers{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#2A2E33;padding:14px;border-radius:4px}
+.br{display:flex;align-items:center;gap:12px;background:#3A3F45;border-radius:3px;padding:10px 12px;border:0;color:var(--paper);text-align:left;cursor:pointer;font:inherit;width:100%}
+.br .sw{flex:0 0 46px;height:26px;background:#15181C;border-radius:3px;position:relative}
+.br .sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;background:var(--steel);border-radius:2px;transition:left .18s ease,background .18s ease}
+.br[aria-pressed="true"] .sw::after{left:23px;background:var(--copper-lt)}
+.br .hand{font-family:'Nanum Pen Script',cursive;font-size:23px;line-height:1.05}
+.panel .hint{font-size:13px;margin-top:12px;color:var(--ink);opacity:.75}
+
+/* stripe */
+.wire{height:14px;background:linear-gradient(90deg,var(--copper) 0 33%,var(--ink) 33% 66%,var(--steel) 66%)}
+
+.about{background:var(--paper);padding:110px 0}
+.about .grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px}
+.about h2,.say h2,.call h2{font-size:clamp(44px,6vw,84px);text-transform:uppercase}
+.about p{font-size:19px;margin-bottom:16px;max-width:56ch}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:36px;border-top:2px solid var(--ink)}
+.facts div{padding:18px 18px 0 0}
+.facts b{display:block;font-family:'Archivo';font-stretch:80%;font-weight:800;font-size:40px;line-height:1}
+.facts span{font-size:14px}
+
+.say{padding:110px 0}
+.say h2{margin-bottom:46px}
+.lead-q{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start;border-top:2px solid var(--ink);padding-top:36px}
+.lead-q .big{font-family:'Archivo';font-stretch:62%;font-weight:800;font-size:clamp(90px,14vw,190px);line-height:.8;color:var(--copper)}
+.lead-q p{font-size:clamp(22px,2.4vw,30px);line-height:1.4;max-width:46ch}
+.lead-q cite,.mini cite{display:block;font-style:normal;font-family:'Archivo';font-weight:600;font-size:15px;margin-top:16px;color:var(--steel-dk)}
+.minis{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:50px}
+.mini{border-left:4px solid var(--copper);padding-left:22px}
+.mini p{font-size:21px}
+
+.call{background:var(--ink);color:var(--paper);padding:110px 0}
+.call .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:end}
+.call .num{font-family:'Archivo';font-stretch:72%;font-weight:800;font-size:clamp(44px,6vw,88px);white-space:nowrap;line-height:.9;color:var(--copper-lt);text-decoration:none;display:block;margin:26px 0}
+.call p{font-size:18px;color:#c9ccc8;max-width:40ch}
+.call .btn{background:var(--copper);color:var(--ink)}
+.call .btn:hover{background:var(--paper)}
+
+footer{background:var(--ink);color:#8d9399;border-top:1px solid #2c3036;font-size:13px;padding:24px 0}
+
+@media (max-width:880px){
+  .hero,.about .grid,.call .grid{grid-template-columns:1fr;gap:40px}
+  .hero{padding:48px 0 70px}
+  .about,.say,.call{padding:76px 0}
+  .lead-q{grid-template-columns:1fr;gap:6px}
+  .minis{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .breakers{grid-template-columns:1fr}
+  .btn.ghost{margin:12px 0 0}
+  .facts{grid-template-columns:1fr 1fr}
+  .top .tel{font-size:15px}
+  .logo{font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){.br .sw::after{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="#B8733C"/></svg>Imad's Electric Service</a>
+    <a class="tel" href="tel:+13137406046">(313) 740-6046</a>
+  </header>
+</div>
+
+<section class="wrap hero">
+  <div>
+    <h1 class="disp">Clean work.<span class="cu">Wired right.</span></h1>
+    <p>Residential electrical work in Dearborn Heights and nearby, from outlet updates to new kitchen lighting and EV charger installs.</p>
+    <a class="btn" href="tel:+13137406046">Call Imad</a><a class="btn ghost" href="sms:+13137406046">Send a text</a>
+  </div>
+  <div class="panel">
+    <div class="label"><span>Panel directory</span><span>Dearborn Heights, MI</span></div>
+    <div class="breakers">
+      <button class="br" aria-pressed="true"><span class="sw"></span><span class="hand">Outlet updates</span></button>
+      <button class="br" aria-pressed="true"><span class="sw"></span><span class="hand">Recessed lighting</span></button>
+      <button class="br" aria-pressed="true"><span class="sw"></span><span class="hand">LED kitchen lights</span></button>
+      <button class="br" aria-pressed="true"><span class="sw"></span><span class="hand">EV charger install</span></button>
+      <button class="br" aria-pressed="false"><span class="sw"></span><span class="hand">Your project?</span></button>
+      <button class="br" aria-pressed="false"><span class="sw"></span><span class="hand">Call to ask</span></button>
+    </div>
+    <p class="hint">Tap a breaker. The labeled circuits are jobs customers have hired Imad for.</p>
+  </div>
+</section>
+
+<div class="wire" aria-hidden="true"></div>
+
+<section class="about">
+  <div class="wrap grid">
+    <h2 class="disp">Your house, done properly.</h2>
+    <div>
+      <p>Outdated outlets, a dim kitchen, a new electric car in the driveway. Customers say Imad is on time, respectful and professional, and that the finished work looks clean and works perfectly.</p>
+      <p>Call or text with what you need, and set up a time that works for you.</p>
+      <div class="facts">
+        <div><b>4.9</b><span>Google rating</span></div>
+        <div><b>56</b><span>Google reviews</span></div>
+        <div><b>Local</b><span>Dearborn Heights based</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap say">
+  <h2 class="disp">From the neighbors</h2>
+  <div class="lead-q">
+    <div class="big" aria-hidden="true">“</div>
+    <div>
+      <p>I recently hired Imad to update all the old outlets in my house and install new recessed and LED lighting in my kitchen. He did an amazing job. Everything looks clean and works perfectly.</p>
+      <cite>Alex, Google review</cite>
+    </div>
+  </div>
+  <div class="minis">
+    <figure class="mini"><p>“Excellent work! Imad's electrical service was fast, professional, and affordable. Highly recommended!”</p><cite>Hani, Google review</cite></figure>
+    <figure class="mini"><p>“Recommend for ev charger”</p><cite>Kalal, Google review</cite></figure>
+  </div>
+</section>
+
+<section class="call">
+  <div class="wrap grid">
+    <div>
+      <h2 class="disp">Got a project?</h2>
+      <a class="num" href="tel:+13137406046">(313) 740-6046</a>
+      <p>Serving Dearborn Heights and the surrounding area. Call or text to set up a time that works for you.</p>
+    </div>
+    <div><a class="btn" href="tel:+13137406046">Call for a quote</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">Sample design prepared for Imad's Electric Service — not affiliated with or endorsed by the business.</div></footer>
+<script>
+document.querySelectorAll('.br').forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true')})});
+</script>
+</body>
+</html>

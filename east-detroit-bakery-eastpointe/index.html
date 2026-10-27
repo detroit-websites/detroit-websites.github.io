@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>East Detroit Bakery &amp; Deli — Eastpointe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rye:#4A2E1F; --rye-deep:#2F1C12; --cherry:#B3122E; --butter:#F2C14E;
+  --flour:#FFFEFB; --crust:#E9D3B4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--flour);color:var(--rye);font-family:Karla,system-ui,sans-serif;line-height:1.6;font-size:1.06rem;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--butter);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+.awning{height:70px;position:relative;
+  background:repeating-linear-gradient(90deg,var(--cherry) 0 60px,var(--flour) 60px 120px)}
+.awning::after{content:"";position:absolute;left:0;right:0;bottom:-18px;height:18px;
+  background:radial-gradient(circle at 30px 0,var(--cherry) 29px,transparent 30px) 0 0/120px 18px repeat-x,
+             radial-gradient(circle at 90px 0,#F3E9E6 29px,transparent 30px) 0 0/120px 18px repeat-x}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:44px 0 10px;font-weight:500}
+.nav a{text-decoration:none}
+
+.hero{padding:40px 0 100px;text-align:center}
+.hero .est{font-family:Rufina,serif;font-size:1.2rem;color:var(--cherry)}
+.hero h1{font-family:Rufina,serif;font-weight:700;font-size:clamp(3.2rem,9vw,8rem);line-height:.92;letter-spacing:-.02em;margin-top:14px}
+.hero h1 small{display:block;font-size:.42em;font-weight:400;letter-spacing:0;margin-top:14px;color:var(--cherry)}
+.hero p{margin:28px auto 0;max-width:46ch;font-size:1.18rem;color:#6B4F3F}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;justify-content:center}
+.btn{display:inline-block;padding:16px 30px;text-decoration:none;font-weight:700;background:var(--cherry);color:var(--flour);border-radius:3px}
+.btn:hover{background:#920E25}
+.btn.line{background:transparent;color:var(--rye);border:2px solid var(--rye)}
+
+.case{background:var(--rye);color:var(--flour);padding:100px 0}
+.case h2,.voices h2,.visit h2{font-family:Rufina,serif;font-weight:700;font-size:clamp(2.3rem,4.6vw,3.8rem);line-height:1.02}
+.case .lead{margin-top:14px;color:#D9C3AE;max-width:52ch}
+.shelves{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:3px solid var(--butter)}
+.shelf{padding:30px 26px 34px 0}
+.shelf + .shelf{padding-left:26px;border-left:1px solid rgba(255,254,251,.15)}
+.shelf h3{font-family:Rufina,serif;font-weight:700;font-size:1.65rem;color:var(--butter)}
+.shelf ul{list-style:none;margin-top:14px}
+.shelf li{padding:7px 0;color:#F1E4D6}
+
+.voices{padding:110px 0}
+.voices .top{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end}
+.score{text-align:right;font-family:Rufina,serif}
+.score b{font-size:clamp(4rem,9vw,7rem);line-height:1;color:var(--cherry)}
+.score span{display:block;font-family:Karla;color:#6B4F3F}
+.big{margin-top:64px;font-family:Rufina,serif;font-size:clamp(1.7rem,3.4vw,2.7rem);line-height:1.2;max-width:30ch}
+.big + cite{display:block;margin-top:16px;font-style:normal;font-weight:700;color:var(--cherry)}
+.small{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.small figure{background:var(--crust);padding:30px 28px;border-radius:2px}
+.small figure:nth-child(2){background:#F7E6B8}
+.small figure:nth-child(3){background:#F3D8DA}
+.small cite{display:block;margin-top:14px;font-style:normal;font-weight:700}
+
+.visit{background:var(--cherry);color:var(--flour);padding:96px 0}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.visit address{font-style:normal;margin-top:18px;font-size:1.15rem}
+.visit .btn{background:var(--butter);color:var(--rye-deep)}
+.visit .btn.line{background:transparent;color:var(--flour);border-color:var(--flour)}
+.visit .btns{justify-content:flex-start}
+.hrs{width:100%;border-collapse:collapse}
+.hrs td{padding:15px 0;border-bottom:1px solid rgba(255,254,251,.25)}
+.hrs td:last-child{text-align:right;font-weight:700}
+footer{background:var(--rye-deep);color:#C4AE98;text-align:center;font-size:.82rem;padding:26px 0}
+
+@media (max-width:900px){
+  .shelves{grid-template-columns:1fr 1fr}
+  .shelf:nth-child(3){padding-left:0;border-left:0}
+  .voices .top,.visit .grid{grid-template-columns:1fr;gap:30px}
+  .score{text-align:left}
+  .small{grid-template-columns:1fr}
+  .case,.voices,.visit{padding:72px 0}
+}
+@media (max-width:480px){
+  .wrap{padding:0 20px}
+  .shelves{grid-template-columns:1fr}
+  .shelf,.shelf + .shelf{padding-left:0;border-left:0;border-bottom:1px solid rgba(255,254,251,.15)}
+  .awning{height:50px}
+}
+</style>
+</head>
+<body>
+<div class="awning" aria-hidden="true"></div>
+<div class="wrap">
+  <nav class="nav"><a href="#">East Detroit Bakery &amp; Deli</a><a href="tel:+15867766450">(586) 776-6450</a></nav>
+  <section class="hero">
+    <p class="est">On 9 Mile in Eastpointe</p>
+    <h1>East Detroit Bakery <small>&amp; Deli</small></h1>
+    <p>Cheesecake by the slice, cakes for every occasion, donuts in the morning, fresh rye and Italian bread, and a deli counter making subs to order.</p>
+    <div class="btns">
+      <a class="btn" href="tel:+15867766450">Order a cake</a>
+      <a class="btn line" href="#case">See the case</a>
+    </div>
+  </section>
+</div>
+
+<section class="case" id="case">
+  <div class="wrap">
+    <h2>In the case today</h2>
+    <p class="lead">The lineup changes with the day and the season. Here's what our regulars come back for.</p>
+    <div class="shelves">
+      <div class="shelf"><h3>Cakes</h3><ul><li>Cheesecake slices</li><li>German chocolate</li><li>Carrot cake</li><li>Birthday &amp; graduation cakes</li></ul></div>
+      <div class="shelf"><h3>Pastry</h3><ul><li>Donuts</li><li>Cinnamon roll donuts</li><li>Paczki</li><li>Cannoli</li></ul></div>
+      <div class="shelf"><h3>Bread</h3><ul><li>Buttermilk rye</li><li>Italian bread</li><li>Cheese &amp; jalapeño bread</li></ul></div>
+      <div class="shelf"><h3>Deli</h3><ul><li>Italian subs</li><li>Kowalski meats</li><li>Deli meats &amp; cheeses</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap">
+    <div class="top">
+      <h2>Worth the drive, say our customers</h2>
+      <div class="score"><b>4.6</b><span>Google rating from 1,500+ reviews</span></div>
+    </div>
+    <p class="big">“Ordered a graduation cake for my daughter it was by far the best cake I've ever had! Thay did a phenomenal job of decorating it.”</p>
+    <cite>Steven</cite>
+    <div class="small">
+      <figure><p>“The cheesecakes were rich and creamy, while the cake was moist, fresh, and full of flavor.”</p><cite>Steve</cite></figure>
+      <figure><p>“One of the last places you can still get a loaf of Buttermilk Rye bread with the original style black seeds on the bread.”</p><cite>Google review</cite></figure>
+      <figure><p>“They offer Kowalski products on sandwiches, they have a large assortment of baked goods, desserts &amp; breads.”</p><cite>Pauly</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap grid">
+    <div>
+      <h2>Stop by the counter</h2>
+      <address>17530 E 9 Mile Rd<br>Eastpointe, MI 48021</address>
+      <div class="btns">
+        <a class="btn" href="tel:+15867766450">Call (586) 776-6450</a>
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&query=East%20Detroit%20Bakery%20%26%20Deli%2017530%20E%209%20Mile%20Rd%20Eastpointe%20MI" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <table class="hrs" aria-label="Opening hours">
+      <tr><td>Monday</td><td>Closed</td></tr>
+      <tr><td>Tuesday – Saturday</td><td>7 am – 6 pm</td></tr>
+      <tr><td>Sunday</td><td>7 am – 4 pm</td></tr>
+    </table>
+  </div>
+</section>
+<footer><div class="wrap">Sample design prepared for East Detroit Bakery &amp; Deli — not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>

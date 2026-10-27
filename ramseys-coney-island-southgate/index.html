@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ramsey's Coney Island, Southgate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Narrow:wght@500;600&family=Libre+Franklin:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --enamel:#163D2E;
+  --enamel-2:#1F5240;
+  --porcelain:#F3F5F2;
+  --mustard:#E2A62A;
+  --ketchup:#B3302A;
+  --felt:#1E1D1B;
+  --ink:#16201B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--porcelain);color:var(--ink);font-family:'Libre Franklin',sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+
+.bar{background:var(--ketchup);color:#fff;font-size:15px}
+.bar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.bar a{text-decoration:none;font-weight:600}
+
+.sign{background:var(--enamel);color:var(--porcelain);padding:90px 0 0;position:relative;overflow:hidden}
+.sign .wrap{position:relative}
+.sign .est{font-family:'Archivo Narrow',sans-serif;font-weight:600;font-size:18px;color:var(--mustard);margin-bottom:10px}
+.sign h1{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(72px,15vw,212px);line-height:.86;text-transform:uppercase;letter-spacing:.005em}
+.sign h1 .line2{display:block;color:var(--mustard)}
+.sign .row{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:end;margin-top:44px;padding-bottom:60px}
+.sign p{font-size:20px;max-width:34ch;color:#d9e2dc}
+.cta{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.btn{display:inline-block;padding:16px 26px;font-family:'Archivo Narrow',sans-serif;font-weight:600;font-size:18px;text-decoration:none;border-radius:6px}
+.btn.y{background:var(--mustard);color:var(--ink)}
+.btn.o{border:2px solid var(--porcelain)}
+.btn:hover{transform:translateY(-1px)}
+.checks{height:44px;background:
+  conic-gradient(var(--porcelain) 25%,var(--ink) 0 50%,var(--porcelain) 0 75%,var(--ink) 0) 0 0/44px 44px}
+
+.lead{padding:110px 0 90px;display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.lead h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(40px,5.4vw,70px);line-height:1;text-transform:uppercase;color:var(--enamel)}
+.lead p{font-size:19px;margin-bottom:18px;max-width:52ch}
+
+/* letterboard */
+.board-sec{padding:0 0 110px}
+.board{background:var(--felt);border:14px solid #6b4a2f;border-radius:6px;padding:46px 40px;color:#f4f1ea;
+  background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 2px,transparent 2px 22px);
+  box-shadow:inset 0 0 40px rgba(0,0,0,.5)}
+.board h3{font-family:'Archivo Narrow',sans-serif;font-weight:600;font-size:clamp(22px,3vw,30px);letter-spacing:.14em;text-align:center;margin-bottom:34px;color:var(--mustard)}
+.board ul{list-style:none;columns:2;column-gap:60px;font-family:'Archivo Narrow',sans-serif;font-weight:500;font-size:clamp(19px,2.4vw,26px);letter-spacing:.12em;text-transform:uppercase}
+.board li{padding:8px 0;break-inside:avoid;border-bottom:1px dotted rgba(244,241,234,.18)}
+.board .note{text-align:center;margin-top:30px;font-family:'Libre Franklin';font-style:italic;font-size:14px;letter-spacing:0;color:#b9b3a6}
+
+/* reviews */
+.praise{background:var(--mustard);padding:110px 0}
+.praise h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(40px,5.4vw,70px);line-height:1;text-transform:uppercase;color:var(--ink);margin-bottom:50px;max-width:14ch}
+.ticket-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.slip{background:#fffdf6;padding:28px 26px 22px;border-top:6px solid var(--ketchup);position:relative}
+.slip:nth-child(odd){rotate:-.8deg}.slip:nth-child(even){rotate:.7deg}
+.slip p{font-size:19px;line-height:1.45;margin-bottom:14px}
+.slip cite{font-style:normal;font-family:'Archivo Narrow',sans-serif;font-weight:600;font-size:15px;color:var(--enamel)}
+.count{margin-top:46px;font-weight:600}
+
+/* visit */
+.visit{background:var(--enamel);color:var(--porcelain);padding:110px 0}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.visit h2{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(40px,5.4vw,70px);line-height:1;text-transform:uppercase;margin-bottom:24px}
+.hours{font-family:'Archivo Narrow',sans-serif;font-weight:500;font-size:24px;border-top:2px solid var(--mustard)}
+.hours div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(243,245,242,.2)}
+.hours .off{color:var(--mustard)}
+.visit address{font-style:normal;font-size:19px;margin-bottom:24px}
+.visit .phone{font-family:'Anton',sans-serif;font-size:clamp(40px,5vw,58px);text-decoration:none;color:var(--mustard);display:block;margin-bottom:28px}
+
+footer{background:var(--ink);color:#a7b3ac;font-size:13px;padding:26px 0}
+
+@media (max-width:860px){
+  .sign{padding-top:56px}
+  .sign h1{line-height:.94}
+  .sign .row,.lead,.visit .grid{grid-template-columns:1fr;gap:30px}
+  .cta{justify-content:flex-start}
+  .ticket-row{grid-template-columns:1fr}
+  .board ul{columns:1}
+  .lead,.praise,.visit{padding:76px 0}
+  .board-sec{padding-bottom:76px}
+}
+@media (max-width:480px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .board{padding:30px 20px;border-width:10px}
+  .bar .wrap{font-size:14px}
+}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap"><span>Open 6 am to 3 pm. Closed Tuesdays.</span><a href="tel:+17342816645">(734) 281-6645</a></div></div>
+
+<header class="sign">
+  <div class="wrap">
+    <p class="est">Dix Toledo Road, Southgate</p>
+    <h1>Ramsey's<span class="line2">Coney Island</span></h1>
+    <div class="row">
+      <p>Big breakfasts, fresh coneys and a booth with your name on it. Downriver's favorite neighborhood diner.</p>
+      <div class="cta">
+        <a class="btn y" href="tel:+17342816645">Call the diner</a>
+        <a class="btn o" href="https://www.google.com/maps/search/?api=1&query=Ramsey%27s%20Coney%20Island%2012552%20Dix%20Toledo%20Rd%20Southgate%20MI%2048195">Directions</a>
+      </div>
+    </div>
+  </div>
+  <div class="checks" aria-hidden="true"></div>
+</header>
+
+<section class="wrap lead">
+  <h2>Pull up a seat. Breakfast is on.</h2>
+  <div>
+    <p>From the first pot of coffee at six to the last plate of the lunch rush, Ramsey's keeps it simple: generous portions, food made fresh, and servers who remember how you like your eggs.</p>
+    <p>Bring the family, bring the crew from work, or just come in on your own with the paper. There's always room at the counter.</p>
+  </div>
+</section>
+
+<section class="wrap board-sec">
+  <div class="board">
+    <h3>WHAT THE REGULARS ORDER</h3>
+    <ul>
+      <li>Pancakes</li><li>Waffles</li><li>Omelets</li><li>Bacon on the side</li>
+      <li>Coney dogs</li><li>Handmade burgers</li><li>Chili fries</li><li>Fries with gravy</li>
+      <li>Fried perch</li><li>Taco special</li>
+    </ul>
+    <p class="note">Favorites mentioned by Ramsey's guests. Ask your server about today's specials.</p>
+  </div>
+</section>
+
+<section class="praise">
+  <div class="wrap">
+    <h2>Downriver has spoken.</h2>
+    <div class="ticket-row">
+      <figure class="slip"><p>“Best all around Coney Island Downriver! Portion's can't be beat! Always fresh and always flavorful.”</p><cite>Allen, Yelp</cite></figure>
+      <figure class="slip"><p>“Great food , good portions, fair prices and the service is always amazing”</p><cite>Billy, Yelp</cite></figure>
+      <figure class="slip"><p>“omg they have the best Pancakes and waffles around.”</p><cite>Wendi, Facebook</cite></figure>
+      <figure class="slip"><p>“Excellent food!! Huge portions, friendly service and very reasonably priced.”</p><cite>Jeremiah, Facebook</cite></figure>
+      <figure class="slip"><p>“Absolutely the best breakfast in Michigan.”</p><cite>Donald, Facebook</cite></figure>
+      <figure class="slip"><p>“Excellent local diner. Always serving the freshest food .”</p><cite>Carmensita, Yelp</cite></figure>
+    </div>
+    <p class="count">More than 1,000 Google reviews and counting.</p>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap grid">
+    <div>
+      <h2>Come hungry.</h2>
+      <address>12552 Dix Toledo Rd<br>Southgate, MI 48195</address>
+      <a class="phone" href="tel:+17342816645">(734) 281-6645</a>
+      <a class="btn y" href="https://www.google.com/maps/search/?api=1&query=Ramsey%27s%20Coney%20Island%2012552%20Dix%20Toledo%20Rd%20Southgate%20MI%2048195">Get directions</a>
+    </div>
+    <div class="hours" aria-label="Hours">
+      <div><span>Monday</span><span>6 am – 3 pm</span></div>
+      <div class="off"><span>Tuesday</span><span>Closed</span></div>
+      <div><span>Wednesday</span><span>6 am – 3 pm</span></div>
+      <div><span>Thursday</span><span>6 am – 3 pm</span></div>
+      <div><span>Friday</span><span>6 am – 3 pm</span></div>
+      <div><span>Saturday</span><span>6 am – 3 pm</span></div>
+      <div><span>Sunday</span><span>6 am – 3 pm</span></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Sample design prepared for Ramsey's Coney Island — not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Handy Hanson Painting, Westland</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Familjen+Grotesk:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wall:#F8F8F5;
+  --charcoal:#2A2D2E;
+  --tape:#3E7CC0;
+  --sage:#8E9C82;
+  --clay:#C58F6A;
+  --navy:#2F3E5C;
+  --linen:#E7DFD2;
+  --mustard:#D7B45A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden}
+body{background:var(--wall);color:var(--charcoal);font-family:'Familjen Grotesk',sans-serif;font-size:18px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--tape);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:'Syne',sans-serif;font-weight:800;letter-spacing:-.02em}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+nav .brand{font-family:'Syne';font-weight:700;font-size:20px;text-decoration:none}
+nav .tel{text-decoration:none;font-weight:500;background:var(--tape);color:#fff;padding:9px 16px;border-radius:2px}
+
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;padding:50px 0 110px}
+.hero h1{font-size:clamp(44px,7.4vw,108px);line-height:.94}
+.hero p{font-size:21px;max-width:34ch;margin:28px 0 34px}
+.btn{display:inline-block;background:var(--charcoal);color:var(--wall);text-decoration:none;font-weight:500;padding:17px 28px;border-radius:2px}
+.btn:hover{background:var(--tape)}
+.btn.line{background:none;color:var(--charcoal);box-shadow:inset 0 0 0 2px var(--charcoal);margin-left:10px}
+
+/* fan deck */
+.fan{position:relative;height:440px}
+.chip{position:absolute;left:50%;bottom:20px;width:150px;height:360px;margin-left:-75px;transform-origin:50% 92%;background:#fff;border-radius:6px;padding:10px;box-shadow:0 14px 30px -18px rgba(42,45,46,.55);display:flex;flex-direction:column;gap:6px}
+.chip span{flex:1;border-radius:2px}
+.chip small{font-size:12px;line-height:1.2;padding:4px 2px 0;color:#555}
+.chip:nth-child(1){transform:rotate(-34deg)}.chip:nth-child(2){transform:rotate(-17deg)}
+.chip:nth-child(3){transform:rotate(0)}.chip:nth-child(4){transform:rotate(17deg)}.chip:nth-child(5){transform:rotate(34deg)}
+.fan .pin{position:absolute;left:50%;bottom:44px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--charcoal);box-shadow:0 0 0 4px #fff}
+@media (prefers-reduced-motion:no-preference){
+  .chip{animation:open .9s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes open{from{transform:rotate(0)}}
+}
+
+/* tape strip */
+.strip{height:40px;background:var(--tape);position:relative;width:100%;margin:0;rotate:-1.2deg;
+  -webkit-mask:linear-gradient(90deg,transparent 0,#000 8px calc(100% - 8px),transparent);mask:linear-gradient(90deg,transparent 0,#000 8px calc(100% - 8px),transparent);
+  opacity:.92;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+
+.work{padding:110px 0}
+.work .head{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-bottom:60px}
+.work h2,.voice h2,.book h2{font-size:clamp(32px,4.4vw,60px);line-height:1;font-weight:700}
+.work .head p{font-size:19px;align-self:end;max-width:48ch}
+.svc{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.svc div{border-top:10px solid var(--c);padding-top:18px}
+.svc h3{font-size:22px;line-height:1.15;margin-bottom:8px;font-weight:700}
+.svc p{font-size:15px;color:#555}
+
+.voice{background:var(--charcoal);color:var(--wall);padding:120px 0}
+.voice h2{margin-bottom:60px;max-width:14ch}
+.big-quote{font-family:'Syne';font-weight:600;font-size:clamp(26px,3.4vw,46px);line-height:1.1;max-width:22ch}
+.big-quote + cite{display:block;font-style:normal;margin:20px 0 70px;color:#b8bcbd}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.quotes figure{border-left:3px solid var(--tape);padding-left:22px}
+.quotes p{font-size:19px;margin-bottom:14px}
+.quotes cite{font-style:normal;font-size:15px;color:#b8bcbd}
+.stars{margin-top:60px;color:#b8bcbd;font-size:15px}
+
+.book{padding:120px 0 100px}
+.book .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:start}
+.book p{font-size:19px;max-width:42ch;margin:22px 0 30px}
+.card{background:#fff;border:2px solid var(--charcoal);padding:34px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:17px}
+.card dt{font-weight:500}
+.card .num{display:block;white-space:nowrap;font-family:'Familjen Grotesk';font-weight:500;font-size:clamp(28px,3vw,38px);text-decoration:none;margin-bottom:22px;color:var(--tape)}
+
+footer{border-top:1px solid #ddd;padding:26px 0 40px;font-size:13px;color:#666}
+
+@media (max-width:980px){.svc{grid-template-columns:repeat(2,1fr);gap:30px 20px}}
+@media (max-width:860px){
+  .hero,.work .head,.book .grid{grid-template-columns:1fr;gap:30px}
+  .hero{padding:30px 0 80px}
+  .fan{height:380px}
+  .work,.voice,.book{padding:76px 0}
+  .quotes{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .chip{width:116px;height:300px;margin-left:-58px}
+  .fan{height:330px;transform:scale(.82);transform-origin:50% 100%}
+  .svc{grid-template-columns:1fr}
+  .btn.line{margin:12px 0 0}
+  nav .brand{font-size:17px}
+  nav .tel{font-size:14px;padding:8px 12px}
+  .card{padding:24px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a class="brand" href="#">Handy Hanson Painting</a><a class="tel" href="tel:+15177957390">(517) 795-7390</a></nav>
+</div>
+
+<section class="wrap hero">
+  <div>
+    <h1>Crisp lines. Clean rooms. Done right.</h1>
+    <p>Interior painting and handyman work in Westland, with help choosing colors and attention to every edge.</p>
+    <a class="btn" href="tel:+15177957390">Get a quote</a><a class="btn line" href="sms:+15177957390">Text Dustin</a>
+  </div>
+  <div class="fan" aria-hidden="true">
+    <div class="chip"><span style="background:#C9D3C0"></span><span style="background:#A9B79D"></span><span style="background:var(--sage)"></span><small>Garden sage</small></div>
+    <div class="chip"><span style="background:#F1E9DC"></span><span style="background:var(--linen)"></span><span style="background:#D3C6B2"></span><small>Linen white</small></div>
+    <div class="chip"><span style="background:#9FBCE0"></span><span style="background:#6F9BD0"></span><span style="background:var(--tape)"></span><small>Lake blue</small></div>
+    <div class="chip"><span style="background:#E8C7AE"></span><span style="background:#D8A988"></span><span style="background:var(--clay)"></span><small>Warm clay</small></div>
+    <div class="chip"><span style="background:#7486A6"></span><span style="background:#4E6083"></span><span style="background:var(--navy)"></span><small>Deep harbor</small></div>
+    <div class="pin"></div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"></div>
+
+<section class="wrap work">
+  <div class="head">
+    <h2>What Dustin takes care of</h2>
+    <p>Homeowners call back again and again because the work is tidy, detailed and fairly priced. Here's what he's hired for.</p>
+  </div>
+  <div class="svc">
+    <div style="--c:var(--sage)"><h3>Interior painting</h3><p>Rooms throughout your home, done neatly.</p></div>
+    <div style="--c:var(--clay)"><h3>Kitchens</h3><p>Fresh color for the room you use most.</p></div>
+    <div style="--c:var(--tape)"><h3>Walls, trim and doors</h3><p>Sharp edges where every surface meets.</p></div>
+    <div style="--c:var(--mustard)"><h3>Color and product help</h3><p>Guidance on shades, finishes and hard-to-match colors.</p></div>
+    <div style="--c:var(--navy)"><h3>Handyman jobs</h3><p>Ask about the smaller fixes on your list.</p></div>
+  </div>
+</section>
+
+<section class="voice">
+  <div class="wrap">
+    <h2>Westland homeowners agree.</h2>
+    <p class="big-quote">“Dustin did an amazing job! Very clean and professional. All of the lines are super crispy”</p>
+    <cite>Ashlee, Google review</cite>
+    <div class="quotes">
+      <figure><p>“Dustin always does an amazing job. I have had him paint a number of times and he is my go to painter.”</p><cite>Dawn, Google review</cite></figure>
+      <figure><p>“Dustin is extremely talented and is very detailed, he is the Best Painter ever and also an Amazing Handyman”</p><cite>Jill, Google review</cite></figure>
+      <figure><p>“We had a fantastic experience getting our kitchen painted by Dustin.”</p><cite>David, Google review</cite></figure>
+    </div>
+    <p class="stars">Rated 5.0 across 25 Google reviews.</p>
+  </div>
+</section>
+
+<section class="wrap book">
+  <div class="grid">
+    <div>
+      <h2>Ready for a fresh coat?</h2>
+      <p>Tell Dustin which rooms you're thinking about and he'll set up a time to take a look and talk colors.</p>
+      <a class="btn" href="tel:+15177957390">Call for an estimate</a>
+    </div>
+    <div class="card">
+      <a class="num" href="tel:+15177957390">(517) 795-7390</a>
+      <dl>
+        <dt>Hours</dt><dd>Every day, 7 am – 7 pm</dd>
+        <dt>Based in</dt><dd>Westland, MI 48186</dd>
+        <dt>Find us</dt><dd><a href="https://www.facebook.com/handy-hanson-painting-llc-669119169769278/">Facebook</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Sample design prepared for Handy Hanson Painting — not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>

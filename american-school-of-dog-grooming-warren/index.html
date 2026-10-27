@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>American School of Dog Grooming — Warren</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,100&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#134E4A; --teal-deep:#0C3633; --aqua:#A6D8CD; --soap:#FAFDFC;
+  --coral:#EE7B58; --sand:#EEDFC8; --ink:#1B2B2A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--soap);color:var(--ink);font-family:Outfit,system-ui,sans-serif;line-height:1.6;font-size:1.06rem;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:Fraunces,serif;font-variation-settings:"SOFT" 100;font-weight:600}
+
+.hero{background:var(--teal);color:var(--soap);display:grid;grid-template-columns:1.15fr .85fr;min-height:640px}
+.hero .copy{padding:30px 56px 80px max(28px,calc((100vw - 1180px)/2 + 28px));display:flex;flex-direction:column}
+.nav{display:flex;justify-content:space-between;align-items:center;font-weight:500;padding-bottom:20px}
+.nav a{text-decoration:none}
+.nav a[href^="tel"]{white-space:nowrap;margin-left:16px}
+.hero h1{margin-top:auto;font-size:clamp(3rem,6.4vw,5.6rem);line-height:.98;letter-spacing:-.02em}
+.hero p{margin-top:26px;max-width:40ch;font-size:1.18rem;color:#CFE6E1}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-block;padding:16px 30px;border-radius:40px;text-decoration:none;font-weight:600;background:var(--coral);color:var(--teal-deep)}
+.btn:hover{background:#F39373}
+.btn.line{background:transparent;color:var(--soap);border:1.5px solid rgba(250,253,252,.55)}
+.tilewall{background-color:var(--aqua);
+  background-image:linear-gradient(var(--soap) 3px,transparent 3px),linear-gradient(90deg,var(--soap) 3px,transparent 3px);
+  background-size:64px 64px;position:relative;display:flex;align-items:center;justify-content:center;padding:40px}
+.badge{background:var(--soap);color:var(--teal);width:min(300px,80%);aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 0 14px rgba(19,78,74,.12)}
+.badge b{font-family:Fraunces,serif;font-variation-settings:"SOFT" 100;font-size:4.6rem;line-height:1;font-weight:600}
+.badge span{margin-top:8px;font-size:.98rem;max-width:16ch;color:#3F5C59}
+
+.ways{padding:110px 0}
+.ways h2{font-size:clamp(2.2rem,4.4vw,3.6rem);line-height:1.04;color:var(--teal);max-width:18ch}
+.two{margin-top:56px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.two article{padding:44px 40px;border-radius:28px}
+.two article:first-child{background:var(--sand)}
+.two article:last-child{background:var(--teal);color:var(--soap)}
+.two h3{font-size:2rem;line-height:1.1}
+.two p{margin-top:14px;max-width:40ch}
+.two ul{list-style:none;margin-top:22px}
+.two li{padding:10px 0;border-top:1px solid rgba(27,43,42,.15)}
+.two article:last-child li{border-top-color:rgba(250,253,252,.2)}
+.two .btn{margin-top:26px}
+.two article:first-child .btn{background:var(--teal);color:var(--soap)}
+
+.tails{background:var(--aqua);padding:110px 0}
+.tails .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+.tails figure{background:var(--soap);border-radius:28px 28px 28px 4px;padding:34px 30px}
+.tails figure:nth-child(2){margin-top:48px}
+.tails figure:nth-child(3){margin-top:96px}
+.tails p{font-family:Fraunces,serif;font-variation-settings:"SOFT" 100;font-size:1.35rem;line-height:1.35;color:var(--teal)}
+.tails cite{display:block;margin-top:14px;font-style:normal;color:#4C6765;font-size:.92rem}
+.tails h2{font-size:clamp(2.2rem,4.4vw,3.6rem);color:var(--teal-deep);margin-bottom:50px}
+
+.visit{padding:100px 0}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.visit h2{font-size:clamp(2.2rem,4.4vw,3.6rem);line-height:1.04;color:var(--teal)}
+.visit address{font-style:normal;margin-top:18px;font-size:1.15rem}
+.visit .btn.line{color:var(--teal);border-color:var(--teal)}
+.hrs{width:100%;border-collapse:collapse}
+.hrs td{padding:15px 0;border-bottom:1px solid #D5E5E1}
+.hrs td:last-child{text-align:right;font-weight:600}
+.hrs caption{caption-side:bottom;text-align:left;padding-top:14px;color:#4C6765;font-size:.95rem}
+footer{background:var(--teal-deep);color:#9DBFB9;text-align:center;font-size:.82rem;padding:26px 0}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero .copy{padding:24px 28px 60px}
+  .hero h1{margin-top:40px}
+  .tilewall{min-height:340px}
+  .two,.tails .grid,.visit .grid{grid-template-columns:1fr}
+  .tails figure:nth-child(2),.tails figure:nth-child(3){margin-top:0}
+  .ways,.tails,.visit{padding:72px 0}
+}
+@media (max-width:480px){
+  .wrap{padding:0 20px}
+  .hero .copy{padding:20px 20px 52px}
+  .two article{padding:34px 26px}
+}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="copy">
+    <nav class="nav"><a href="#">American School of Dog Grooming</a><a href="tel:+15867595212">(586) 759-5212</a></nav>
+    <h1>Calm hands for nervous dogs.</h1>
+    <p>A grooming school and grooming salon on 9 Mile in Warren. Book your dog in for a groom, or ask about learning the craft yourself.</p>
+    <div class="btns">
+      <a class="btn" href="tel:+15867595212">Book a groom</a>
+      <a class="btn line" href="#ways">How it works</a>
+    </div>
+  </div>
+  <div class="tilewall" aria-hidden="true">
+    <div class="badge"><b>4.6</b><span>Google rating from 96 reviews</span></div>
+  </div>
+</section>
+
+<section class="ways" id="ways">
+  <div class="wrap">
+    <h2>Two ways to walk through our door</h2>
+    <div class="two">
+      <article>
+        <h3>Bring your dog</h3>
+        <p>Grooming by appointment, Tuesday through Saturday. Tell us about your dog when you call, especially if they're anxious or sensitive.</p>
+        <ul>
+          <li>Baths and haircuts</li>
+          <li>First-time and nervous dogs</li>
+          <li>Small breeds to big dogs</li>
+        </ul>
+        <a class="btn" href="tel:+15867595212">Call to book</a>
+      </article>
+      <article>
+        <h3>Learn to groom</h3>
+        <p>This is a working grooming school, so students learn on real appointments. Call to ask about the program and how to enroll.</p>
+        <ul>
+          <li>Hands-on training</li>
+          <li>Real dogs, real appointments</li>
+          <li>Ask about schedules and enrollment</li>
+        </ul>
+        <a class="btn" href="tel:+15867595212">Ask about the school</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="tails">
+  <div class="wrap">
+    <h2>From the people at the other end of the leash</h2>
+    <div class="grid">
+      <figure><p>“I have been taking my dogs here for over 10 years and they like going.”</p><cite>Google review, January 2026</cite></figure>
+      <figure><p>“Did a great job on our nervous Sheltie.”</p><cite>Google review, April 2026</cite></figure>
+      <figure><p>“It's a very chill Place perfect for my Chihuahua”</p><cite>Google review, May 2026</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap grid">
+    <div>
+      <h2>Find us on 9 Mile</h2>
+      <address>8702 E 9 Mile Rd<br>Warren, MI 48089</address>
+      <div class="btns">
+        <a class="btn" href="tel:+15867595212">Call (586) 759-5212</a>
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&query=American%20School%20of%20Dog%20Grooming%208702%20E%209%20Mile%20Rd%20Warren%20MI" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <table class="hrs">
+      <caption>By appointment only.</caption>
+      <tr><td>Tuesday – Saturday</td><td>9 am – 5 pm</td></tr>
+      <tr><td>Sunday &amp; Monday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+<footer><div class="wrap">Sample design prepared for American School of Dog Grooming — not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>

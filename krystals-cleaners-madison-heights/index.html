@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krystal's Cleaners — Madison Heights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wool:#2E3036; --wool-deep:#212328; --chalk:#F5F4F0; --tape:#E6C449;
+  --thread:#A3343A; --slate:#8A8D93;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--chalk);color:var(--wool);font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.6;font-size:1.05rem;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tape);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+
+.hero{background-color:var(--wool);color:var(--chalk);
+  background-image:repeating-linear-gradient(90deg,transparent 0 46px,rgba(245,244,240,.07) 46px 47px)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0;font-weight:500}
+.nav a{text-decoration:none}
+.nav .name{font-family:"Instrument Serif",serif;font-size:1.5rem;font-weight:400}
+.hero .inner{padding:70px 0 90px;max-width:900px}
+.hero h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(3rem,7.4vw,6.4rem);line-height:.98;letter-spacing:-.01em}
+.hero p{margin-top:28px;max-width:44ch;font-size:1.18rem;color:#CDCED2}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.btn{display:inline-block;padding:15px 28px;text-decoration:none;font-weight:600;background:var(--tape);color:var(--wool-deep);border-radius:3px}
+.btn:hover{background:#F0D263}
+.btn.line{background:transparent;color:var(--chalk);border:1px solid rgba(245,244,240,.5)}
+
+/* tape measure */
+.tape{height:64px;background-color:var(--tape);position:relative;overflow:hidden;
+  background-image:
+   repeating-linear-gradient(90deg,var(--wool) 0 2px,transparent 2px 80px),
+   repeating-linear-gradient(90deg,var(--wool) 0 1px,transparent 1px 40px),
+   repeating-linear-gradient(90deg,var(--wool) 0 1px,transparent 1px 10px);
+  background-size:100% 30px,100% 20px,100% 11px;background-repeat:repeat-x;background-position:0 0,0 0,0 0}
+.tape span{position:absolute;bottom:8px;font-size:.78rem;font-weight:600;color:var(--wool)}
+
+.work{padding:110px 0;display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.work h2,.words h2,.visit h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(2.3rem,4.6vw,3.8rem);line-height:1.02}
+.work .note{margin-top:18px;color:#5D6068;max-width:40ch}
+.svc{list-style:none}
+.svc li{padding:22px 0;border-top:1px solid #D9D7D0;display:grid;grid-template-columns:1fr 1.4fr;gap:20px;align-items:baseline}
+.svc li:last-child{border-bottom:1px solid #D9D7D0}
+.svc b{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.6rem}
+.svc span{color:#5D6068}
+
+.feature{background:var(--thread);color:var(--chalk);padding:100px 0}
+.feature blockquote{font-family:"Instrument Serif",serif;font-size:clamp(2rem,4.6vw,3.8rem);line-height:1.08;max-width:22ch}
+.feature cite{display:block;margin-top:24px;font-style:normal;font-weight:500;color:#F2D4D6}
+
+.words{padding:110px 0}
+.words .cols{margin-top:50px;columns:3 300px;column-gap:40px}
+.words figure{break-inside:avoid;margin-bottom:34px;padding-left:18px;border-left:2px solid var(--tape)}
+.words p{font-size:1.06rem}
+.words cite{display:block;margin-top:8px;font-style:normal;font-size:.9rem;color:#6D7078}
+
+.visit{background:var(--wool-deep);color:var(--chalk);padding:96px 0}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.visit address{font-style:normal;margin-top:18px;font-size:1.15rem;color:#CDCED2}
+.hrs{width:100%;border-collapse:collapse}
+.hrs td{padding:15px 0;border-bottom:1px solid rgba(245,244,240,.15)}
+.hrs td:last-child{text-align:right;font-weight:600}
+footer{background:var(--wool-deep);border-top:1px solid rgba(245,244,240,.1);color:#9C9EA4;text-align:center;font-size:.82rem;padding:26px 0}
+
+@media (max-width:900px){
+  .work,.visit .grid{grid-template-columns:1fr;gap:40px}
+  .work,.words,.feature,.visit{padding:72px 0}
+  .work{padding-left:0;padding-right:0}
+}
+@media (max-width:520px){
+  .wrap{padding:0 20px}
+  .svc li{grid-template-columns:1fr;gap:4px}
+  .hero .inner{padding:40px 0 64px}
+  .work{padding-top:72px;padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="wrap">
+    <nav class="nav"><a class="name" href="#">Krystal's Cleaners</a><a href="tel:+12485481477">(248) 548-1477</a></nav>
+    <div class="inner">
+      <h1>Cleaned, pressed and fitted to you.</h1>
+      <p>Dry cleaning and alterations on John R in Madison Heights. Bring in the suit, the dress, or the shirt with the stain, and leave it with someone who knows your wardrobe.</p>
+      <div class="btns">
+        <a class="btn" href="tel:+12485481477">Call the shop</a>
+        <a class="btn line" href="#visit">Hours &amp; location</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="tape" aria-hidden="true"></div>
+
+<section class="wrap work">
+  <div>
+    <h2>Two trades under one roof</h2>
+    <p class="note">Cleaning and alterations are handled at the same counter, so one drop-off takes care of both.</p>
+  </div>
+  <ul class="svc">
+    <li><b>Dry cleaning</b><span>Suits, blazers, jackets and dresses</span></li>
+    <li><b>Shirts &amp; pressing</b><span>Crisp, finished and ready to wear</span></li>
+    <li><b>Stain removal</b><span>Point out the spot when you drop off</span></li>
+    <li><b>Alterations</b><span>Hems, dress alterations and fit adjustments</span></li>
+  </ul>
+</section>
+
+<section class="feature">
+  <div class="wrap">
+    <blockquote>“I call Krystal's my very own personal stylist my alterations are precise as well as the cleaning is outstanding.”</blockquote>
+    <cite>Annie, Google review</cite>
+  </div>
+</section>
+
+<section class="words">
+  <div class="wrap">
+    <h2>What customers say</h2>
+    <div class="cols">
+      <figure><p>“Krystal herself went out of her way to have my suit ready for a funeral. Great job.”</p><cite>Clayton</cite></figure>
+      <figure><p>“I was afraid the stains wouldn't come out of a dress I wore to a wedding. The stains came out and the dress looks perfect. They did an awesome job.”</p><cite>Karen</cite></figure>
+      <figure><p>“Always gets my blazers, suits and jackets looking new. Highly recommend!”</p><cite>AJ</cite></figure>
+      <figure><p>“She has hemmed and cleaned many items over the years and has done an excellent job.”</p><cite>Lisa</cite></figure>
+      <figure><p>“The best place for dry cleaning and alterations! Always greeted with a smile!”</p><cite>Julie</cite></figure>
+      <figure><p>“quick and fairly priced great staff”</p><cite>Stef</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap grid">
+    <div>
+      <h2>Drop off on John R</h2>
+      <address>28834 John R Rd<br>Madison Heights, MI 48071</address>
+      <div class="btns">
+        <a class="btn" href="tel:+12485481477">Call (248) 548-1477</a>
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&query=Krystal%27s%20Cleaners%2028834%20John%20R%20Rd%20Madison%20Heights%20MI" target="_blank" rel="noopener">Get directions</a>
+      </div>
+    </div>
+    <table class="hrs" aria-label="Opening hours">
+      <tr><td>Monday – Friday</td><td>10:30 am – 6 pm</td></tr>
+      <tr><td>Saturday</td><td>10:30 am – 3 pm</td></tr>
+      <tr><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+<footer><div class="wrap">Sample design prepared for Krystal's Cleaners — not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>
