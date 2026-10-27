@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eddie's Alterations, Royal Oak</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --shirting:#E4EAF0;
+  --shirting-deep:#D3DCE6;
+  --navy:#1A2747;
+  --navy-soft:#3C4A6B;
+  --chalk:#E9C84A;
+  --thread:#A12A2E;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--shirting);color:var(--navy);font-family:'Jost',sans-serif;font-weight:400;font-size:17px;line-height:1.6;overflow-x:hidden;
+  background-image:repeating-linear-gradient(90deg,transparent 0 22px,rgba(26,39,71,.035) 22px 23px);}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--thread);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+.mark{font-family:'Bodoni Moda',serif;font-style:italic;font-size:22px;text-decoration:none}
+.top a.call{font-size:15px;text-decoration:none;border-bottom:1px solid var(--navy);padding-bottom:2px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:60px;align-items:end;padding:70px 0 56px}
+.hero h1{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(64px,11vw,156px);line-height:.86;letter-spacing:-.02em}
+.hero h1 span{display:block;font-style:italic;font-weight:400;font-size:.36em;letter-spacing:0;margin-top:.3em;white-space:nowrap;color:var(--navy-soft)}
+.hero p.lede{font-size:20px;max-width:30ch;margin-bottom:28px;color:var(--navy-soft)}
+.btn{display:inline-block;background:var(--navy);color:var(--white);text-decoration:none;padding:16px 28px;font-size:15px;letter-spacing:.04em;border-radius:2px}
+.btn:hover{background:var(--thread)}
+
+/* tape */
+.tape{position:relative;height:64px;background:var(--chalk);border-top:1px solid rgba(26,39,71,.25);border-bottom:1px solid rgba(26,39,71,.25);overflow:hidden;
+  background-image:
+   repeating-linear-gradient(90deg,var(--navy) 0 1px,transparent 1px 96px),
+   repeating-linear-gradient(90deg,var(--navy) 0 1px,transparent 1px 48px),
+   repeating-linear-gradient(90deg,var(--navy) 0 1px,transparent 1px 12px);
+  background-size:100% 30px,100% 18px,100% 10px;background-repeat:repeat-x;background-position:0 0,0 0,0 0;}
+.tape .nums{position:absolute;left:0;bottom:6px;display:flex;font-family:'Jost';font-size:12px;font-weight:500;white-space:nowrap}
+.tape .nums b{display:inline-block;width:96px;padding-left:4px;font-weight:500}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;padding:110px 0 90px}
+.intro h2{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.05}
+.intro p{max-width:58ch;margin-bottom:18px;font-size:18px}
+.services{list-style:none;margin-top:34px;border-top:1px solid rgba(26,39,71,.3)}
+.services li{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid rgba(26,39,71,.3);font-size:17px}
+.services li em{font-family:'Bodoni Moda',serif;color:var(--navy-soft);font-size:15px;white-space:nowrap}
+
+/* reviews */
+.voices{background:var(--navy);color:var(--shirting);padding:110px 0}
+.voices h2{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.05;max-width:16ch;margin-bottom:60px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.q{border:1px dashed rgba(233,200,74,.55);padding:30px 26px 24px;position:relative}
+.q:nth-child(2),.q:nth-child(5){transform:translateY(34px)}
+.q p{font-family:'Bodoni Moda',serif;font-size:21px;line-height:1.35;margin-bottom:20px}
+.q cite{font-style:normal;font-size:14px;color:var(--chalk);letter-spacing:.03em}
+.src{margin-top:76px;font-size:13px;opacity:.7}
+
+/* ticket */
+.visit{padding:110px 0}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.visit h2{font-family:'Bodoni Moda',serif;font-weight:400;font-size:clamp(34px,4.4vw,54px);line-height:1.05;margin-bottom:22px}
+.visit p{font-size:18px;max-width:40ch;margin-bottom:14px}
+.ticket{background:var(--white);position:relative;padding:38px 40px 34px;box-shadow:0 1px 0 rgba(26,39,71,.15);
+  -webkit-mask:radial-gradient(circle 9px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 9px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 9px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 9px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat;}
+.ticket .no{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed var(--navy-soft);padding-bottom:16px;margin-bottom:18px}
+.ticket .no span{font-family:'Bodoni Moda',serif;font-style:italic;font-size:26px}
+.ticket .no small{font-size:13px;color:var(--thread)}
+.ticket table{width:100%;border-collapse:collapse;font-size:16px}
+.ticket td{padding:7px 0}
+.ticket td:last-child{text-align:right}
+.ticket .addr{border-top:1px dashed var(--navy-soft);margin-top:18px;padding-top:18px;font-size:16px}
+.ticket .addr a{font-family:'Bodoni Moda',serif;font-size:28px;text-decoration:none;display:block;margin-top:6px}
+
+footer{border-top:1px solid rgba(26,39,71,.25);padding:30px 0 40px;font-size:13px;color:var(--navy-soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .hero,.intro,.visit-grid{grid-template-columns:1fr;gap:34px}
+  .hero{padding:40px 0 44px}
+  .intro,.voices,.visit{padding:72px 0}
+  .quotes{grid-template-columns:1fr}
+  .q:nth-child(2),.q:nth-child(5){transform:none}
+  .src{margin-top:34px}
+}
+@media (max-width:480px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .ticket{padding:30px 24px}
+  .services li{flex-direction:column;gap:2px}
+  .top a.call{font-size:14px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .tape .nums{animation:slide 40s linear infinite}
+  @keyframes slide{to{transform:translateX(-96px)}}
+}
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <a class="mark" href="#">Eddie's Alterations</a>
+  <a class="call" href="tel:+12485423583">(248) 542-3583</a>
+</header>
+
+<section class="wrap hero">
+  <h1>Eddie's<span>Alterations, Royal Oak</span></h1>
+  <div>
+    <p class="lede">A neighborhood tailor on 11 Mile Road for hems, suits, gowns and the repairs other shops send back.</p>
+    <a class="btn" href="tel:+12485423583">Call the shop</a>
+  </div>
+</section>
+
+<div class="tape" aria-hidden="true"><div class="nums" id="nums"></div></div>
+
+<section class="wrap intro">
+  <h2>Clothes that fit the way they were meant to.</h2>
+  <div>
+    <p>Bring in the trousers that are a little too long, the jacket with the stuck zipper, the dress you love but can't quite wear yet. Eddie looks it over, tells you plainly what it needs, and gets it done right.</p>
+    <p>Many small jobs, like a hem or a zipper, can often be handled while you wait. Ask when you call.</p>
+    <ul class="services">
+      <li>Hemming for dress pants and jeans <em>often while you wait</em></li>
+      <li>Suit and dress trouser alterations <em>fitted to you</em></li>
+      <li>Evening gowns and specialty skirts <em>handled with care</em></li>
+      <li>Dress shortening and taking in or out <em>by appointment or walk-in</em></li>
+      <li>Zipper replacement and clothing repair <em>jackets, coats, more</em></li>
+      <li>Patches and uniform sewing <em>scouts and teams</em></li>
+    </ul>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap">
+    <h2>What Royal Oak says about Eddie.</h2>
+    <div class="quotes">
+      <figure class="q"><p>“Very nice person to deal with. Fixed my jacket zipper while I waited. Highly recommended.”</p><cite>John, Yelp</cite></figure>
+      <figure class="q"><p>“I've been going to him for years! Always good, fast, reasonable, and easy to work with.”</p><cite>Rachel, Yelp</cite></figure>
+      <figure class="q"><p>“Simply the best tailor around.”</p><cite>Ben, Foursquare</cite></figure>
+      <figure class="q"><p>“I have yet to bring anything in that could not be repaired or made right.”</p><cite>Ian, Yelp</cite></figure>
+      <figure class="q"><p>“If you want quality work in a timely manner, this is the place for you!”</p><cite>Sean, Foursquare</cite></figure>
+      <figure class="q"><p>“Eddie tells it like it is. Heed his advice.”</p><cite>Patrick, Foursquare</cite></figure>
+    </div>
+    <p class="src">Rated by roughly 167 customers on Google.</p>
+  </div>
+</section>
+
+<section class="wrap visit">
+  <div class="visit-grid">
+    <div>
+      <h2>Drop it off on 11 Mile.</h2>
+      <p>Walk in during shop hours, or call ahead if you'd like to check on timing for a gown, suit or rush job.</p>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Eddie%27s%20Alterations%20826%20E%2011%20Mile%20Rd%20Royal%20Oak%20MI%2048067">Get directions</a>
+    </div>
+    <div class="ticket">
+      <div class="no"><span>Shop hours</span><small>Closed Sundays</small></div>
+      <table>
+        <tr><td>Monday – Friday</td><td>10 am – 6 pm</td></tr>
+        <tr><td>Saturday</td><td>10 am – 4 pm</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <div class="addr">826 E 11 Mile Rd, Royal Oak, MI 48067
+        <a href="tel:+12485423583">(248) 542-3583</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Eddie's Alterations, Royal Oak, Michigan</span>
+    <span>Sample design prepared for Eddie's Alterations — not affiliated with or endorsed by the business.</span>
+  </div>
+</footer>
+<script>
+  var n=document.getElementById('nums'),h='';for(var i=1;i<=60;i++){h+='<b>'+i+'</b>'}n.innerHTML=h;
+</script>
+</body>
+</html>
