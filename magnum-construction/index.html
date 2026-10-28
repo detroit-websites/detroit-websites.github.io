@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magnum Construction | Roofing in Wyandotte</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,600;125,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --slate:#36424a;
+  --slate-d:#242d33;
+  --cedar:#8b5a3a;
+  --sky:#dbe4e8;
+  --chalk:#f7f8f8;
+  --copper:#b8743f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--chalk);color:var(--slate-d);font:400 18px/1.65 "Source Serif 4",Georgia,serif;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--copper);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
+.sans{font-family:"Archivo",sans-serif}
+
+.nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;gap:14px}
+.brand{font:800 22px/1 "Archivo",sans-serif;font-stretch:125%;letter-spacing:.02em}
+.nav a{white-space:nowrap;font:600 16px/1 "Archivo",sans-serif;text-decoration:none;color:var(--cedar)}
+
+/* Hero with roof pitch */
+.hero{position:relative;background:var(--sky);overflow:hidden}
+.hero .wrap{position:relative;z-index:2;padding-top:84px;padding-bottom:230px}
+.hero h1{font:800 clamp(46px,7.6vw,112px)/.92 "Archivo",sans-serif;font-stretch:125%;letter-spacing:-.02em;max-width:11ch}
+.hero p{font-size:21px;max-width:40ch;margin-top:26px;color:var(--slate)}
+.hero .btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-block;padding:16px 28px;font:600 17px/1 "Archivo",sans-serif;text-decoration:none;border:2px solid var(--slate-d)}
+.btn.f{background:var(--slate-d);color:var(--chalk)}
+.btn:hover{background:var(--copper);border-color:var(--copper);color:#fff}
+.roof{position:absolute;left:0;right:0;bottom:0;height:200px;z-index:1;
+  clip-path:polygon(0 100%,0 62%,50% 0,100% 62%,100% 100%);
+  background-color:var(--slate);
+  background-image:
+    repeating-linear-gradient(0deg,transparent 0 22px,rgba(0,0,0,.28) 22px 24px),
+    repeating-linear-gradient(90deg,transparent 0 46px,rgba(0,0,0,.18) 46px 48px);}
+.ridge{position:absolute;left:0;right:0;bottom:0;height:200px;z-index:1;pointer-events:none;
+  clip-path:polygon(0 62%,50% 0,100% 62%,100% 66%,50% 5%,0 66%);background:var(--copper)}
+
+/* Stats band */
+.band{background:var(--slate);color:var(--chalk)}
+.band .wrap{display:flex;flex-wrap:wrap;gap:18px 60px;padding-top:30px;padding-bottom:34px}
+.band b{font:800 42px/1 "Archivo",sans-serif;font-stretch:125%;color:#f0c9a2;margin-right:10px}
+
+/* Work */
+.work{padding:110px 0}
+.work .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.work h2{font:800 clamp(34px,4.2vw,54px)/1 "Archivo",sans-serif;font-stretch:112%}
+.work p.lead{margin-top:22px;max-width:44ch;color:var(--slate)}
+.jobs{list-style:none;border-top:2px solid var(--slate-d)}
+.jobs li{padding:20px 0;border-bottom:1px solid #c6d0d4}
+.jobs strong{display:block;font:600 21px/1.3 "Archivo",sans-serif}
+.jobs span{color:#5a666d;font-size:16px}
+
+/* Testimony */
+.voices{background:var(--slate-d);color:var(--chalk);padding:110px 0}
+.voices h2{font:800 clamp(34px,4.2vw,54px)/1 "Archivo",sans-serif;font-stretch:112%;margin-bottom:56px;max-width:16ch}
+.v{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+.v figure{padding:34px 34px 34px 0;border-top:1px solid #4b5961}
+.v figure:nth-child(2n){padding-left:34px;border-left:1px solid #4b5961;padding-right:0}
+.v blockquote{font:italic 400 clamp(21px,2.2vw,26px)/1.45 "Source Serif 4",serif}
+.v figcaption{margin-top:14px;font:600 15px/1 "Archivo",sans-serif;color:#f0c9a2}
+
+/* Contact */
+.contact{padding:100px 0}
+.contact .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end}
+.contact h2{font:800 clamp(38px,5.4vw,72px)/.95 "Archivo",sans-serif;font-stretch:125%}
+.contact p{margin-top:20px;max-width:46ch;color:var(--slate)}
+.card{border:2px solid var(--slate-d);padding:30px}
+.card a.tel{display:block;font:800 34px/1.1 "Archivo",sans-serif;text-decoration:none;color:var(--cedar);margin:6px 0 18px}
+.card address{font-style:normal}
+
+footer{background:var(--slate-d);color:#9aa6ad;font:400 13px/1.5 "Archivo",sans-serif;text-align:center;padding:26px 0}
+
+@media (max-width:860px){
+  .work .wrap,.contact .wrap{grid-template-columns:1fr;gap:44px}
+  .v{grid-template-columns:1fr}
+  .v figure,.v figure:nth-child(2n){padding:28px 0;border-left:0}
+  .hero .wrap{padding-top:56px;padding-bottom:170px}
+  .roof,.ridge{height:140px}
+  .work,.voices{padding:76px 0}
+}
+@media (max-width:420px){.wrap{padding:0 18px}.brand{font-size:18px}.card a.tel{font-size:28px}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="wrap">
+    <div class="nav"><div class="brand">MAGNUM CONSTRUCTION</div><a href="tel:+17342810097">(734) 281-0097</a></div>
+    <h1>Roofs done right, in a day.</h1>
+    <p>Wyandotte roofing and construction. Tear-offs, reshingling and garage roofs, at prices homeowners call fair.</p>
+    <div class="btns">
+      <a class="btn f" href="tel:+17342810097">Call for an estimate</a>
+      <a class="btn" href="#contact">Find the office</a>
+    </div>
+  </div>
+  <div class="roof" aria-hidden="true"></div>
+  <div class="ridge" aria-hidden="true"></div>
+</section>
+
+<div class="band sans"><div class="wrap">
+  <div><b>4.9</b>stars on Google</div>
+  <div><b>39</b>Google reviews</div>
+</div></div>
+
+<section class="work">
+  <div class="wrap">
+    <div>
+      <h2>What we do for Downriver homes.</h2>
+      <p class="lead">Every job gets the same care: a clear quote, quality shingles, a crew that works fast, and a yard left clean when we're gone.</p>
+    </div>
+    <ul class="jobs">
+      <li><strong>Roof replacement</strong><span>Full tear-off and new shingles</span></li>
+      <li><strong>Garage roofs</strong><span>Detached and attached garages</span></li>
+      <li><strong>Insulation</strong><span>Including over-garage insulation</span></li>
+      <li><strong>General construction</strong><span>Ask what your project needs</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap">
+    <h2>Neighbors who had their roofs done.</h2>
+    <div class="v">
+      <figure><blockquote>“Magnum Construction did my roof and did a great job. In and out in one day yard was clean no damage to anything.”</blockquote><figcaption>Tim, Yelp</figcaption></figure>
+      <figure><blockquote>“I had my roof and my mom's roof done by Magnum. They do excellent work and gave me the best quote”</blockquote><figcaption>Douglas, Google</figcaption></figure>
+      <figure><blockquote>“The best roofing company ever! Honest ! Prices are fair.”</blockquote><figcaption>Google review</figcaption></figure>
+      <figure><blockquote>“Great job. Great price and also did insulation over my garage which helped gas bills immensely.”</blockquote><figcaption>Lynn, Google</figcaption></figure>
+      <figure><blockquote>“Just fantastic, fast and good work guaranteed.”</blockquote><figcaption>Richard, Google</figcaption></figure>
+      <figure><blockquote>“Magnum Construction replaced my roof. They did an excellent job.”</blockquote><figcaption>Linda, Yelp</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Get a roof quote.</h2>
+      <p>Call the office to set up a time for us to look at your roof. We'll walk you through the options and the price before any work starts.</p>
+    </div>
+    <div class="card">
+      <span class="sans">Call the office</span>
+      <a class="tel" href="tel:+17342810097">(734) 281-0097</a>
+      <address>4120 Biddle Ave<br>Wyandotte, MI 48192</address>
+      <p style="margin-top:14px"><a href="https://www.google.com/maps/search/?api=1&amp;query=Magnum%20Construction%204120%20Biddle%20Ave%20Wyandotte%20MI%2048192">Get directions</a></p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Sample design prepared for Magnum Construction - not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>

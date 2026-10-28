@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Franklin Tailor Shop | Farmington Hills</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,400;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --charcoal:#2c2d31;
+  --linen:#eeece6;
+  --chalk:#f9f8f5;
+  --pin:#b1383a;
+  --tape:#e7c862;
+  --thread:#5d7287;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--linen);color:var(--charcoal);font:400 17px/1.7 "Jost",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--pin);outline-offset:4px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+
+.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0;gap:12px}
+.name{font:600 24px/1 "Cormorant",serif;letter-spacing:.02em}
+.top a{text-decoration:none;font-weight:500;border-bottom:1px solid var(--pin)}
+
+.hero{padding:60px 0 0}
+.hero h1{font:500 clamp(54px,9vw,128px)/.9 "Cormorant",serif;letter-spacing:-.015em;max-width:9ch}
+.hero h1 i{font-weight:400}
+.hero .intro{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:40px;align-items:end}
+.hero p{font-size:19px;max-width:42ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:15px 28px;text-decoration:none;font-weight:500;letter-spacing:.03em;border:1px solid var(--charcoal)}
+.btn.d{background:var(--charcoal);color:var(--chalk)}
+.btn:hover{background:var(--pin);border-color:var(--pin);color:#fff}
+
+/* Tape measure */
+.tape{margin-top:80px;height:64px;background-color:var(--tape);position:relative;
+  background-image:
+    repeating-linear-gradient(90deg,var(--charcoal) 0 1px,transparent 1px 12px),
+    repeating-linear-gradient(90deg,var(--charcoal) 0 2px,transparent 2px 60px);
+  background-size:100% 14px,100% 26px;background-repeat:repeat-x;background-position:0 0,0 0;
+  box-shadow:inset 0 -1px 0 rgba(0,0,0,.15)}
+.tape ol{list-style:none;display:flex;justify-content:space-around;position:absolute;inset:auto 0 10px 0;font:500 14px/1 "Jost",sans-serif}
+.tape li{color:var(--charcoal)}
+
+/* Services */
+.services{padding:110px 0 90px}
+.services .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.services h2{font:500 clamp(38px,4.6vw,60px)/1 "Cormorant",serif}
+.services .sub{margin-top:20px;max-width:36ch;color:#55565c}
+.svc{list-style:none}
+.svc li{display:grid;grid-template-columns:1fr auto;gap:14px;padding:18px 0;border-bottom:1px dashed #a9a59b;font-size:18px}
+.svc li span:last-child{font:italic 400 19px/1.5 "Cormorant",serif;color:var(--thread)}
+
+/* Reviews */
+.reviews{background:var(--chalk);padding:110px 0}
+.feature{font:italic 400 clamp(32px,4.4vw,56px)/1.15 "Cormorant",serif;max-width:22ch;margin-bottom:22px}
+.feature-by{font-weight:500;color:var(--pin);margin-bottom:70px}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:46px}
+.cols figure{border-left:2px solid var(--pin);padding-left:22px}
+.cols blockquote{font:italic 400 22px/1.45 "Cormorant",serif}
+.cols figcaption{margin-top:12px;font-size:14px;color:#6a6b70}
+
+/* Visit */
+.visit{background:var(--charcoal);color:var(--linen);padding:96px 0}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.visit h2{font:500 clamp(38px,4.6vw,60px)/1 "Cormorant",serif;margin-bottom:18px}
+.visit address{font-style:normal;font-size:20px;margin-bottom:26px}
+.visit .btn{border-color:var(--linen)}
+.visit .btn.d{background:var(--linen);color:var(--charcoal)}
+.hrs{list-style:none}
+.hrs li{display:flex;justify-content:space-between;gap:12px;padding:15px 0;border-bottom:1px solid #4a4b50;font-size:18px}
+.visit small{display:block;margin-top:16px;color:#b5b2a8}
+
+footer{background:#1f2023;color:#9c9a92;text-align:center;font-size:13px;padding:26px 0}
+
+@media (max-width:860px){
+  .hero .intro,.services .wrap,.visit .wrap{grid-template-columns:1fr;gap:36px}
+  .cols{grid-template-columns:1fr}
+  .services,.reviews{padding:76px 0}
+  .tape{margin-top:56px}
+}
+@media (max-width:420px){.wrap{padding:0 18px}.tape li:nth-child(n+4){display:none}.name{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><div class="name">Franklin Tailor Shop</div><a href="tel:+12482859975">(248) 285-9975</a></div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Made to <i>fit you</i>.</h1>
+    <div class="intro">
+      <p>A family-run tailor shop on Middlebelt Road for hems, take-ins, dresses and jeans, finished well and ready when promised.</p>
+      <div class="btns">
+        <a class="btn d" href="tel:+12482859975">Call the shop</a>
+        <a class="btn" href="#visit">Hours and directions</a>
+      </div>
+    </div>
+  </div>
+  <div class="tape" aria-hidden="true"><ol><li>Hem</li><li>Take in</li><li>Let out</li><li>Taper</li><li>Shorten</li></ol></div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <div>
+      <h2>Bring it in. Leave it with us.</h2>
+      <p class="sub">Tell us how you want it to fit. We'll pin it, mark it and get it right.</p>
+    </div>
+    <ul class="svc">
+      <li><span>Pants hemmed</span><span>dress pants and jeans</span></li>
+      <li><span>Taking in and resizing</span><span>for a better fit</span></li>
+      <li><span>Dress alterations</span><span>for the occasion</span></li>
+      <li><span>Jeans altered</span><span>tapered or shortened</span></li>
+      <li><span>Quick turnaround</span><span>ask about next-day</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <p class="feature">“Excellent tailoring great turn around time. A gem of a tailor shop.”</p>
+    <p class="feature-by">Linda, Yelp</p>
+    <div class="cols">
+      <figure><blockquote>“Family run and highly skilled. They will go the extra mile and on one occasion even met me on a day they were closed.”</blockquote><figcaption>Nahla, Yelp</figcaption></figure>
+      <figure><blockquote>“Efficient, work done well and ready as promised. Conveniently located and ample parking.”</blockquote><figcaption>Betty, Yelp</figcaption></figure>
+      <figure><blockquote>“Sue is friendly and takes good care of my tailoring needs”</blockquote><figcaption>Michael, Facebook</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <h2>Find us on Middlebelt.</h2>
+      <address>32980 Middlebelt Rd<br>Farmington Hills, MI 48334</address>
+      <div class="btns">
+        <a class="btn d" href="tel:+12482859975">(248) 285-9975</a>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Franklin%20Tailor%20Shop%2C%2032980%20Middlebelt%20Rd%2C%20Farmington%20Hills%2C%20MI%2048334">Directions</a>
+      </div>
+    </div>
+    <div>
+      <ul class="hrs">
+        <li><span>Monday – Friday</span><span>Open</span></li>
+        <li><span>Saturday</span><span>9 am – 3 pm</span></li>
+        <li><span>Sunday</span><span>Closed</span></li>
+      </ul>
+      <small>Call for weekday hours and pick-up times.</small>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Sample design prepared for Franklin Tailor Shop - not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>

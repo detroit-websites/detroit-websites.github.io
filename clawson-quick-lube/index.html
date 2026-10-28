@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clawson Quick Lube – Oil changes on 14 Mile in Clawson</title>
+<meta name="description" content="Clawson Quick Lube at 1359 W 14 Mile Rd: quick, thorough oil changes, open seven days. Call (248) 206-7181.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700;800&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petrol:#123A5E;
+  --amber:#E09A1E;
+  --oil:#2B2118;
+  --fog:#EFF2F3;
+  --steel:#B9C3CB;
+  --white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fog);color:var(--petrol);font-family:"Public Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Saira Condensed",sans-serif;font-weight:800;line-height:.95}
+
+.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:12px}
+.top .n{font-family:"Saira Condensed";font-weight:800;font-size:26px;text-decoration:none}
+.top a.t{text-decoration:none;font-weight:700;background:var(--petrol);color:var(--white);padding:10px 18px;border-radius:4px;white-space:nowrap}
+
+/* hero: the week board */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;padding:40px 0 96px;align-items:center}
+.hero h1{font-size:clamp(60px,9vw,128px);text-transform:none}
+.hero h1 span{display:block;color:var(--amber)}
+.hero p{font-size:19px;margin-top:24px;max-width:30em;color:#2c4a66}
+.hero .acts{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-block;padding:16px 28px;border-radius:4px;font-weight:700;text-decoration:none}
+.btn.a{background:var(--amber);color:var(--oil)}
+.btn.a:hover{background:#f0ab33}
+.btn.b{border:2px solid var(--petrol)}
+.board{background:var(--petrol);color:var(--white);border-radius:10px;padding:34px 34px 26px;position:relative}
+.board::after{content:"";position:absolute;right:28px;top:-34px;width:56px;height:72px;background:var(--amber);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;clip-path:path("M28 0 C 28 0 0 34 0 48 A 28 28 0 0 0 56 48 C 56 34 28 0 28 0 Z")}
+.board h2{font-size:44px}
+.board p.sub{color:var(--steel);margin-top:4px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:26px}
+.days div{background:#1d4b74;border-radius:4px;padding:12px 0 10px;text-align:center}
+.days b{display:block;font-family:"Saira Condensed";font-size:24px}
+.days small{font-size:12px;color:var(--steel)}
+.days .sun{background:var(--amber);color:var(--oil)}
+.days .sun small{color:var(--oil)}
+.board table{width:100%;border-collapse:collapse;margin-top:22px}
+.board td{padding:10px 0;border-top:1px solid #2b5c86}
+.board td:last-child{text-align:right;font-weight:700}
+
+.bay{background:var(--white);padding:96px 0}
+.bay-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:64px}
+.bay h2{font-size:clamp(42px,5.4vw,70px)}
+.bay .intro{margin-top:18px;max-width:28em}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.svc div{padding:22px 0;border-bottom:2px solid var(--fog)}
+.svc h3{font-size:30px}
+.svc p{font-size:16px;color:#3e5a73;margin-top:4px}
+
+.drivers{padding:100px 0}
+.drivers h2{font-size:clamp(42px,5.4vw,70px)}
+.d-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;margin-top:52px}
+.d-grid figure{background:var(--white);border-radius:10px;padding:34px;border-left:8px solid var(--amber)}
+.d-grid figure.big{grid-row:span 2;background:var(--petrol);color:var(--white);border-left-color:var(--amber)}
+.d-grid figure.big blockquote{font-family:"Saira Condensed";font-weight:700;font-size:clamp(30px,3.4vw,44px);line-height:1.08}
+.d-grid blockquote{font-size:19px}
+.d-grid figcaption{margin-top:14px;font-size:14px;color:#5b7387}
+.d-grid figure.big figcaption{color:var(--steel)}
+
+.find{background:var(--oil);color:var(--fog);padding:96px 0}
+.find-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end}
+.find h2{font-size:clamp(44px,6vw,80px);color:var(--amber)}
+.find address{font-style:normal;font-size:20px;margin-top:20px}
+.find a.p{display:inline-block;font-family:"Saira Condensed";font-weight:800;font-size:clamp(40px,6vw,64px);text-decoration:none;color:var(--white)}
+.find p{color:#cbbfb3;margin-top:8px}
+footer{background:var(--oil);color:#a99a8b;text-align:center;font-size:13px;padding:0 24px 40px}
+
+@media (max-width:900px){
+  .hero,.bay-grid,.find-grid,.d-grid{grid-template-columns:1fr}
+  .d-grid figure.big{grid-row:auto}
+  .board{margin-top:24px}
+}
+@media (max-width:520px){
+  .svc{grid-template-columns:1fr}
+  .board{padding:28px 18px 20px}
+  .days{gap:4px}
+  .days b{font-size:18px}
+  .days small{font-size:10px}
+  .top .n{font-size:21px}.top a.t{padding:9px 12px;font-size:15px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="n" href="#top">Clawson Quick Lube</a>
+    <a class="t" href="tel:+12482067181">(248) 206-7181</a>
+  </header>
+  <section class="hero" id="top">
+    <div>
+      <h1>Clawson <span>Quick Lube</span></h1>
+      <p>Thorough, quick oil changes on 14 Mile, done right the first time. Pull in, get your options explained plainly, and get back on the road.</p>
+      <div class="acts">
+        <a class="btn a" href="tel:+12482067181">Call the shop</a>
+        <a class="btn b" href="#find">Get directions</a>
+      </div>
+    </div>
+    <div class="board">
+      <h2>Open seven days</h2>
+      <p class="sub">Including Sunday afternoons</p>
+      <div class="days" aria-hidden="true">
+        <div><b>M</b><small>8–7</small></div><div><b>T</b><small>8–7</small></div><div><b>W</b><small>8–7</small></div><div><b>T</b><small>8–7</small></div><div><b>F</b><small>8–7</small></div><div><b>S</b><small>8–6</small></div><div class="sun"><b>S</b><small>11–4</small></div>
+      </div>
+      <table aria-label="Opening hours">
+        <tr><td>Monday – Friday</td><td>8 am – 7 pm</td></tr>
+        <tr><td>Saturday</td><td>8 am – 6 pm</td></tr>
+        <tr><td>Sunday</td><td>11 am – 4 pm</td></tr>
+      </table>
+    </div>
+  </section>
+</div>
+
+<section class="bay">
+  <div class="wrap bay-grid">
+    <div>
+      <h2>In and out, done properly</h2>
+      <p class="intro">Regulars come back because the job gets done right the first time, with every option laid out before any work starts.</p>
+    </div>
+    <div class="svc">
+      <div><h3>Oil changes</h3><p>Quick and thorough, with all your options laid out</p></div>
+      <div><h3>Fluid top-offs</h3><p>Customers say fluids get topped off free between oil changes</p></div>
+      <div><h3>Easy payment</h3><p>Credit, debit and mobile pay accepted</p></div>
+      <div><h3>Other questions?</h3><p>Call and ask what we can take care of today</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="drivers">
+  <div class="wrap">
+    <h2>What regulars say</h2>
+    <div class="d-grid">
+      <figure class="big"><blockquote>“I love this place, I have been taking my vehicle here for 5 years now.”</blockquote><figcaption>Google review, February 2026</figcaption></figure>
+      <figure><blockquote>“Did a thorough and quick oil change. Enjoy the cold refreshing water. Recommended”</blockquote><figcaption>Google review, August 2026</figcaption></figure>
+      <figure><blockquote>“Abe was so very helpful and professional.”</blockquote><figcaption>Google review, February 2026</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap find-grid">
+    <div>
+      <h2>Find us on 14 Mile</h2>
+      <address>1359 W 14 Mile Road<br>Clawson, Michigan 48017</address>
+    </div>
+    <div>
+      <a class="p" href="tel:+12482067181">(248) 206-7181</a>
+      <p>Call ahead or just pull in during open hours.</p>
+    </div>
+  </div>
+</section>
+<footer>Sample design prepared for Clawson Quick Lube - not affiliated with or endorsed by the business.</footer>
+</body>
+</html>
