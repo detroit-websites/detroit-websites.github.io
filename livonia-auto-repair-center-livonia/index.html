@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livonia Auto Repair Center | Plymouth Road, Livonia</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --graphite:#1d2329;
+  --steel:#36424c;
+  --fog:#e6e8e4;
+  --paper:#f2f3ef;
+  --amber:#c9932f;
+  --rust:#8c4a2b;
+  --line:#c7cbc4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--graphite);font:400 17px/1.6 "Barlow",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* Top bar */
+.bar{background:var(--graphite);color:var(--fog)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:14px;padding-bottom:14px}
+.mark{font:600 20px/1 "Barlow Condensed",sans-serif;letter-spacing:.02em}
+.mark span{color:var(--amber)}
+.bar a{white-space:nowrap;font:500 16px/1 "Barlow Condensed",sans-serif;text-decoration:none;letter-spacing:.03em;border-bottom:1px solid var(--amber);padding-bottom:3px}
+
+/* Hero */
+.hero{background:var(--graphite);color:var(--paper);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;padding-top:72px;padding-bottom:96px;align-items:end}
+.hero h1{font:700 clamp(54px,8.4vw,118px)/.9 "Barlow Condensed",sans-serif;letter-spacing:-.01em;text-transform:none}
+.hero h1 em{display:block;font:italic 400 clamp(26px,3.4vw,44px)/1.15 "Newsreader",serif;color:#cfd4d0;margin-top:22px;letter-spacing:0;max-width:20ch}
+.dial{border-left:1px solid #46525c;padding-left:32px}
+.dial p{color:#aab3b8;font-size:15px;margin-bottom:6px}
+.phone{display:block;white-space:nowrap;font:700 clamp(40px,4.6vw,60px)/1 "Barlow Condensed",sans-serif;color:var(--amber);text-decoration:none;letter-spacing:.01em;margin-bottom:26px}
+.phone:hover{color:#e0ad4c}
+.facts{list-style:none;border-top:1px solid #46525c}
+.facts li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #46525c;font-size:15px;color:#d6dbd8}
+.facts b{font-weight:500;color:var(--paper)}
+.gauge{position:absolute;right:-140px;top:-140px;width:420px;height:420px;border-radius:50%;border:1px solid #2d363e;pointer-events:none}
+.gauge::after{content:"";position:absolute;inset:48px;border-radius:50%;border:1px dashed #2d363e}
+
+/* Score strip */
+.score{background:var(--amber);color:var(--graphite)}
+.score .wrap{display:flex;flex-wrap:wrap;gap:12px 48px;align-items:baseline;padding-top:22px;padding-bottom:22px}
+.score strong{font:700 44px/1 "Barlow Condensed",sans-serif}
+.score span{font-weight:500}
+
+/* Promise */
+.promise{padding:110px 0 90px}
+.promise .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.promise h2{font:600 clamp(34px,4vw,52px)/1.02 "Barlow Condensed",sans-serif}
+.promise p{font-size:19px;max-width:58ch;color:var(--steel)}
+.promise p+p{margin-top:18px}
+
+/* Work order (reviews) */
+.order{padding:0 0 110px}
+.ticket{background:#fff;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(29,35,41,.45)}
+.ticket header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:22px 32px;border-bottom:2px solid var(--graphite)}
+.ticket header h2{font:600 30px/1.1 "Barlow Condensed",sans-serif}
+.ticket header p{color:var(--steel);font-size:15px;align-self:center}
+.row{display:grid;grid-template-columns:160px 1fr;gap:28px;padding:26px 32px;border-bottom:1px solid var(--fog)}
+.row:last-child{border-bottom:0}
+.who{font:600 19px/1.2 "Barlow Condensed",sans-serif;color:var(--rust)}
+.who small{display:block;font:400 13px/1.4 "Barlow",sans-serif;color:#7b858b;margin-top:4px}
+.row q{font:italic 400 clamp(20px,2.2vw,25px)/1.4 "Newsreader",serif;quotes:"\201C" "\201D"}
+
+/* Visit */
+.visit{background:var(--fog);padding:96px 0}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.visit h2{font:600 clamp(34px,4vw,50px)/1.02 "Barlow Condensed",sans-serif;margin-bottom:20px}
+.addr{font-size:20px;margin-bottom:26px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:15px 26px;font:600 18px/1 "Barlow Condensed",sans-serif;letter-spacing:.03em;text-decoration:none;border:2px solid var(--graphite)}
+.btn.solid{background:var(--graphite);color:var(--paper)}
+.btn:hover{background:var(--amber);border-color:var(--amber);color:var(--graphite)}
+table{width:100%;border-collapse:collapse;font-size:18px}
+td{padding:14px 0;border-bottom:1px solid var(--line)}
+td:last-child{text-align:right;font-weight:500}
+caption{text-align:left;font:600 22px/1 "Barlow Condensed",sans-serif;padding-bottom:12px}
+
+footer{background:var(--graphite);color:#9aa3a8;font-size:13px;padding:26px 0;text-align:center}
+
+@media (max-width:860px){
+  .hero .wrap,.promise .wrap,.visit .wrap{grid-template-columns:1fr;gap:40px}
+  .hero .wrap{padding-top:48px;padding-bottom:64px}
+  .dial{border-left:0;padding-left:0;border-top:1px solid #46525c;padding-top:28px}
+  .row{grid-template-columns:1fr;gap:8px;padding:22px 20px}
+  .ticket header{padding:20px}
+  .promise{padding:72px 0 64px}
+  .gauge{display:none}
+}
+@media (max-width:420px){.wrap{padding:0 18px}.bar a{font-size:14px}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap">
+  <div class="mark">Livonia Auto Repair <span>Center</span></div>
+  <a href="tel:+17347435777">Call (734) 743-5777</a>
+</div></div>
+
+<section class="hero">
+  <div class="gauge" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1>Honest repairs on Plymouth Road.
+      <em>Fixed quickly, priced fairly, explained plainly.</em></h1>
+    <div class="dial">
+      <p>Talk to the shop</p>
+      <a class="phone" href="tel:+17347435777">(734) 743-5777</a>
+      <ul class="facts">
+        <li>Weekdays <b>8 am – 5 pm</b></li>
+        <li>Weekends <b>Closed</b></li>
+        <li>Find us <b>30451 Plymouth Rd</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="score"><div class="wrap">
+  <strong>4.8</strong><span>stars on Google from 171 reviews</span>
+</div></div>
+
+<section class="promise">
+  <div class="wrap">
+    <h2>The kind of shop people stay with for years.</h2>
+    <div>
+      <p>Bring your car in, tell us what it's doing, and we'll tell you what it actually needs. No upsell, no runaround, just the repair done right and your car back on the road.</p>
+      <p>From diagnostics to transmissions to everyday repairs, you'll deal with people who know their work and treat you like a regular from the first visit.</p>
+    </div>
+  </div>
+</section>
+
+<section class="order">
+  <div class="wrap">
+    <article class="ticket">
+      <header><h2>What our customers wrote</h2><p>From Google reviews</p></header>
+      <div class="row"><div class="who">Rhonda</div><q>They do great work and Mike is very knowledgeable about knowing the repairs that you need. I feel that they are very honest and trustworthy people.</q></div>
+      <div class="row"><div class="who">Google reviewer</div><q>Excellent service and fair pricing! Had my car fixed quickly and back on the road.</q></div>
+      <div class="row"><div class="who">Google reviewer</div><q>Great service best prices been coming here for over 12 years</q></div>
+      <div class="row"><div class="who">Laura</div><q>Excellent service, quality work, and great rapport with customers.</q></div>
+      <div class="row"><div class="who">Marvo</div><q>I recommend this place. Great customer service.</q></div>
+    </article>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap">
+    <div>
+      <h2>Pull in on Plymouth Road.</h2>
+      <p class="addr">30451 Plymouth Rd<br>Livonia, MI 48150</p>
+      <div class="btns">
+        <a class="btn solid" href="tel:+17347435777">Call the shop</a>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Livonia%20Auto%20Repair%20Center%2C%2030451%20Plymouth%20Rd%2C%20Livonia%2C%20MI%2048150">Get directions</a>
+      </div>
+    </div>
+    <table>
+      <caption>Shop hours</caption>
+      <tr><td>Monday – Friday</td><td>8 am – 5 pm</td></tr>
+      <tr><td>Saturday</td><td>Closed</td></tr>
+      <tr><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer><div class="wrap">Sample design prepared for Livonia Auto Repair Center - not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>

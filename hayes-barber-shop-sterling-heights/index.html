@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hayes Barber Shop | Sterling Heights</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bottle:#17322a;
+  --bottle-2:#21443a;
+  --brass:#b8925a;
+  --bone:#ece5d6;
+  --oxblood:#6e2229;
+  --ink:#10201b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bottle);color:var(--bone);font:400 17px/1.65 "Work Sans",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--brass);outline-offset:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+header.top{display:flex;justify-content:space-between;align-items:center;padding:26px 0;border-bottom:1px solid rgba(184,146,90,.35)}
+.logo{font:500 22px/1 "Bodoni Moda",serif;letter-spacing:.04em}
+.top a{font-size:15px;text-decoration:none;color:var(--brass)}
+
+.hero{text-align:center;padding:90px 0 70px}
+.hero .since{font:italic 400 22px/1.3 "Bodoni Moda",serif;color:var(--brass);margin-bottom:22px}
+.hero h1{font:700 clamp(64px,13vw,184px)/.86 "Bodoni Moda",serif;letter-spacing:-.02em}
+.hero h1 span{display:block;font-weight:500;font-size:.34em;letter-spacing:.32em;margin-top:22px;padding-left:.32em}
+.pole{display:flex;justify-content:center;gap:10px;margin:44px 0 40px}
+.pole i{display:block;width:44px;height:3px;background:var(--brass)}
+.pole i:nth-child(2){background:var(--oxblood)}
+.hero p{max-width:46ch;margin:0 auto 34px;font-size:19px;color:#d8d1c1}
+.cta{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.btn{display:inline-block;padding:16px 30px;text-decoration:none;font-weight:500;letter-spacing:.04em;border:1px solid var(--brass)}
+.btn.fill{background:var(--brass);color:var(--ink)}
+.btn:hover{background:var(--bone);color:var(--ink);border-color:var(--bone)}
+
+.count{border-top:1px solid rgba(184,146,90,.35);border-bottom:1px solid rgba(184,146,90,.35)}
+.count .wrap{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+.count div{padding:30px 10px}
+.count div+div{border-left:1px solid rgba(184,146,90,.35)}
+.count b{display:block;font:500 40px/1 "Bodoni Moda",serif;color:var(--brass);margin-bottom:6px}
+.count span{font-size:14px;color:#cfc7b6}
+
+/* Chair list */
+.chairs{background:var(--bone);color:var(--ink);padding:110px 0}
+.chairs .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}
+.chairs h2{font:500 clamp(40px,5vw,64px)/1 "Bodoni Moda",serif;margin-bottom:22px}
+.chairs .lead{font-size:18px;color:#3b4a44;max-width:40ch}
+.names{list-style:none;columns:2;column-gap:40px}
+.names li{font:italic 400 clamp(26px,3vw,36px)/1.5 "Bodoni Moda",serif;color:var(--bottle);break-inside:avoid;border-bottom:1px solid #cbbfa6;padding:6px 0}
+.chairs small{display:block;margin-top:20px;color:#6a6555;font-size:14px}
+
+/* Reviews */
+.words{padding:110px 0}
+.words h2{font:500 clamp(36px,4.4vw,56px)/1.05 "Bodoni Moda",serif;text-align:center;margin-bottom:64px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:56px 72px}
+blockquote{border-top:1px solid var(--brass);padding-top:24px}
+blockquote p{font:italic 400 clamp(22px,2.3vw,28px)/1.4 "Bodoni Moda",serif}
+blockquote cite{display:block;margin-top:14px;font-style:normal;font-size:15px;color:var(--brass)}
+.big{grid-column:1/-1;text-align:center;border-top:0;padding:0 0 10px}
+.big p{font-size:clamp(30px,4vw,48px);line-height:1.2;max-width:24ch;margin:0 auto}
+
+/* Visit */
+.visit{background:var(--oxblood);padding:96px 0}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.visit h2{font:500 clamp(36px,4.4vw,54px)/1.05 "Bodoni Moda",serif;margin-bottom:18px}
+.visit address{font-style:normal;font-size:20px;margin-bottom:28px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid rgba(236,229,214,.3);font-size:18px}
+.hours li span:last-child{font-family:"Bodoni Moda",serif}
+.visit .btn{border-color:var(--bone)}
+.visit .btn.fill{background:var(--bone);color:var(--oxblood)}
+
+footer{background:var(--ink);color:#9a9584;text-align:center;font-size:13px;padding:26px 0}
+
+@media (max-width:820px){
+  .chairs .wrap,.visit .wrap{grid-template-columns:1fr;gap:44px}
+  .grid{grid-template-columns:1fr;gap:44px}
+  .chairs,.words{padding:76px 0}
+  .hero{padding:64px 0 54px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 18px}
+  .count .wrap{grid-template-columns:1fr}
+  .count div+div{border-left:0;border-top:1px solid rgba(184,146,90,.35)}
+  .names{columns:1}
+  .hero h1 span{letter-spacing:.2em}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="logo">Hayes Barber Shop</div>
+    <a href="tel:+15865803680">(586) 580-3680</a>
+  </header>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="since">On Hayes Road, Sterling Heights</p>
+    <h1>Hayes<span>Barber Shop</span></h1>
+    <div class="pole" aria-hidden="true"><i></i><i></i><i></i></div>
+    <p>A full house of barbers, a chair ready when you walk in, and the kind of cut regulars won't trust to anyone else.</p>
+    <div class="cta">
+      <a class="btn fill" href="tel:+15865803680">Call the shop</a>
+      <a class="btn" href="#visit">Hours and directions</a>
+    </div>
+  </div>
+</section>
+
+<section class="count">
+  <div class="wrap">
+    <div><b>4.6</b><span>Google rating</span></div>
+    <div><b>447</b><span>Google reviews</span></div>
+    <div><b>Walk-ins</b><span>and appointments</span></div>
+  </div>
+</section>
+
+<section class="chairs">
+  <div class="wrap">
+    <div>
+      <h2>Ask for someone by name.</h2>
+      <p class="lead">Most of our regulars have a barber. These are the names that come up again and again in our reviews. New here? Walk in and take the next open chair.</p>
+    </div>
+    <div>
+      <ul class="names">
+        <li>Jon</li><li>J.P.</li><li>Angela</li><li>Philip</li><li>Katie</li><li>Rob</li><li>Tom</li><li>Mike</li>
+      </ul>
+      <small>Call ahead to check who is in today.</small>
+    </div>
+  </div>
+</section>
+
+<section class="words">
+  <div class="wrap">
+    <h2>Said in the chair, written on Google.</h2>
+    <div class="grid">
+      <blockquote class="big"><p>“Been getting my hair cut here by Jon for years, wouldn't trust anyone else to cut my hair.”</p><cite>Pete</cite></blockquote>
+      <blockquote><p>“Angela is my barber and she knocks it out of the park every time!!”</p><cite>Tony</cite></blockquote>
+      <blockquote><p>“A very knowledgeable barber. This barbershop specializes in all kinds of hair textures.”</p><cite>Louie</cite></blockquote>
+      <blockquote><p>“They have like 10 barbers ready all the time so walk ins are available too.”</p><cite>Jesse</cite></blockquote>
+      <blockquote><p>“Philip J is always booked because he delivers top‐quality cuts with real care.”</p><cite>Fero</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <h2>Come sit down.</h2>
+      <address>43051 Hayes Rd<br>Sterling Heights, MI 48313</address>
+      <div class="cta" style="justify-content:flex-start">
+        <a class="btn fill" href="tel:+15865803680">(586) 580-3680</a>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Hayes%20Barber%20Shop%2C%2043051%20Hayes%20Rd%2C%20Sterling%20Heights%2C%20MI%2048313">Directions</a>
+      </div>
+    </div>
+    <ul class="hours">
+      <li><span>Tuesday – Friday</span><span>10 am – 7 pm</span></li>
+      <li><span>Saturday</span><span>10 am – 5 pm</span></li>
+      <li><span>Sunday &amp; Monday</span><span>Closed</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer><div class="wrap">Sample design prepared for Hayes Barber Shop - not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>

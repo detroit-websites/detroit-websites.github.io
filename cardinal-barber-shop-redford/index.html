@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardinal Barber Shop – Redford, Michigan</title>
+<meta name="description" content="Cardinal Barber Shop on Five Mile Road in Redford. Haircuts, fades, shaves and kids' cuts. Call (313) 538-3554.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,500&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cardinal:#8E1B24;
+  --cardinal-deep:#5E0F17;
+  --navy:#17213A;
+  --steel:#DDE2E8;
+  --paper:#F6F7F9;
+  --brass:#B08D57;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important}}
+body{background:var(--paper);color:var(--navy);font-family:"Archivo",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* top bar */
+.bar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px}
+.mark{font-family:"Bodoni Moda",serif;font-weight:800;font-size:22px;letter-spacing:.01em;text-decoration:none}
+.mark small{display:block;font-family:"Archivo";font-weight:500;font-size:12px;letter-spacing:.06em;color:#59617a}
+.call{font-weight:600;text-decoration:none;border:1.5px solid var(--navy);padding:10px 18px;border-radius:999px;white-space:nowrap}
+.call:hover{background:var(--navy);color:var(--paper)}
+
+/* hero: pole + name */
+.hero{display:grid;grid-template-columns:120px 1fr;gap:56px;padding:40px 0 88px;align-items:stretch}
+.pole{border-radius:60px;min-height:520px;position:relative;overflow:hidden;
+  background:repeating-linear-gradient(135deg,var(--cardinal) 0 26px,var(--paper) 26px 44px,var(--navy) 44px 70px,var(--paper) 70px 88px);
+  background-size:100% 249px;animation:spin 6s linear infinite;box-shadow:inset 0 0 0 6px var(--brass)}
+@keyframes spin{to{background-position:0 249px}}
+.hero h1{font-family:"Bodoni Moda",serif;font-weight:800;font-size:clamp(64px,11vw,168px);line-height:.86;letter-spacing:-.02em;color:var(--cardinal)}
+.hero h1 span{display:block;font-style:italic;font-weight:500;color:var(--navy)}
+.hero p.lede{max-width:34em;font-size:19px;margin-top:32px;color:#2c3550}
+.hero .facts{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:36px;font-size:15px}
+.hero .facts b{display:block;font-family:"Bodoni Moda",serif;font-size:30px;font-weight:500;color:var(--cardinal);line-height:1.1}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.btn{display:inline-block;padding:16px 28px;border-radius:999px;font-weight:600;text-decoration:none}
+.btn.solid{background:var(--cardinal);color:#fff}
+.btn.solid:hover{background:var(--cardinal-deep)}
+.btn.ghost{border:1.5px solid var(--navy)}
+
+/* chair menu */
+.chair{background:var(--navy);color:var(--steel);padding:96px 0}
+.chair-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.chair h2,.words h2,.visit h2{font-family:"Bodoni Moda",serif;font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1.05}
+.chair h2{color:#fff}
+.chair p{margin-top:20px;max-width:30em;color:#c5ccd8}
+.menu{list-style:none;border-top:1px solid #34405e}
+.menu li{display:flex;justify-content:space-between;gap:24px;padding:22px 0;border-bottom:1px solid #34405e}
+.menu strong{font-family:"Bodoni Moda",serif;font-size:26px;font-weight:500;color:#fff}
+.menu span{color:#aeb7c7;font-size:15px;text-align:right;max-width:20em}
+
+/* words */
+.words{padding:104px 0}
+.words h2{color:var(--cardinal);max-width:14em}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:56px 72px;margin-top:64px}
+.quotes figure{border-left:4px solid var(--cardinal);padding-left:28px}
+.quotes blockquote{font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(22px,2.4vw,28px);line-height:1.35}
+.quotes figcaption{margin-top:14px;font-size:14px;color:#59617a}
+.rating{margin-top:64px;font-size:15px;color:#59617a}
+
+/* visit */
+.visit{background:var(--steel);padding:96px 0}
+.visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px}
+.visit address{font-style:normal;font-size:20px;margin-top:24px}
+.visit .phone{display:inline-block;margin-top:20px;font-family:"Bodoni Moda",serif;font-size:clamp(32px,4vw,44px);color:var(--cardinal);text-decoration:none}
+.hours{width:100%;border-collapse:collapse;font-size:17px}
+.hours td{padding:14px 0;border-bottom:1px solid #b9c1cc}
+.hours td:last-child{text-align:right;font-weight:600}
+.note{font-size:14px;color:#59617a;margin-top:16px}
+
+footer{padding:40px 0 48px;font-size:13px;color:#6b7389;text-align:center}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:28px;padding-top:12px}
+  .pole{min-height:0;height:64px;border-radius:32px;background-size:249px 100%;
+    background:repeating-linear-gradient(45deg,var(--cardinal) 0 26px,var(--paper) 26px 44px,var(--navy) 44px 70px,var(--paper) 70px 88px);animation:none}
+  .chair-grid,.visit-grid,.quotes{grid-template-columns:1fr}
+  .quotes{gap:40px}
+  .menu li{flex-direction:column;gap:4px}
+  .menu span{text-align:left}
+}
+@media (max-width:420px){.call{padding:9px 14px;font-size:15px}.mark{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="bar">
+    <a class="mark" href="#top">Cardinal Barber Shop<small>Five Mile Road, Redford</small></a>
+    <a class="call" href="tel:+13135383554">(313) 538-3554</a>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="pole" aria-hidden="true"></div>
+    <div>
+      <h1>Cardinal<span>Barber Shop</span></h1>
+      <p class="lede">A neighborhood barbershop on Five Mile in Redford. Clean fades, close shaves and patient first haircuts, in a chair your family can come back to for years.</p>
+      <div class="facts">
+        <div><b>4.7</b>Google rating</div>
+        <div><b>150+</b>Google reviews</div>
+        <div><b>Saturdays</b>Open 9 am – 4 pm</div>
+      </div>
+      <div class="btns">
+        <a class="btn solid" href="tel:+13135383554">Call the shop</a>
+        <a class="btn ghost" href="#visit">Hours and directions</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="chair">
+  <div class="wrap chair-grid">
+    <div>
+      <h2>In the chair</h2>
+      <p>Tell your barber what you want and you'll walk out with it. Men, women and kids are all welcome.</p>
+    </div>
+    <ul class="menu">
+      <li><strong>Haircuts</strong><span>Classic cuts, trims and tidy-ups</span></li>
+      <li><strong>Fades</strong><span>Clean, blended fades done the way you ask</span></li>
+      <li><strong>Shaves</strong><span>A relaxing straight shave</span></li>
+      <li><strong>Kids' cuts</strong><span>Patient with little ones, first haircuts included</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="words">
+  <div class="wrap">
+    <h2>What Redford says after the cape comes off</h2>
+    <div class="quotes">
+      <figure><blockquote>“Great barbershop! Amanda is a great barber! She can fade &amp; shave &amp; it's so relaxing.”</blockquote><figcaption>Mamie, Yelp</figcaption></figure>
+      <figure><blockquote>“Cardinal Barber Shop is a professional environment with wonderful haircuts to offer.”</blockquote><figcaption>Amanda, Yelp</figcaption></figure>
+      <figure><blockquote>“I have taken my little boy to see Tammy since his first cut. She is professional, polite and my little guy loves her!”</blockquote><figcaption>Steve, Yellow Pages</figcaption></figure>
+      <figure><blockquote>“Great cut, clean place, family friendly. Will go back.”</blockquote><figcaption>Yellow Pages reviewer</figcaption></figure>
+    </div>
+    <p class="rating">Rated 4.7 on Google across more than 150 reviews.</p>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <h2>Pull up a chair</h2>
+      <address>27309 Five Mile Road<br>Redford, Michigan 48239</address>
+      <a class="phone" href="tel:+13135383554">(313) 538-3554</a>
+      <p class="note">Wheelchair accessible.</p>
+    </div>
+    <div>
+      <table class="hours" aria-label="Opening hours">
+        <tr><td>Monday</td><td>Call to confirm</td></tr>
+        <tr><td>Tuesday – Friday</td><td>9 am – 6 pm</td></tr>
+        <tr><td>Saturday</td><td>9 am – 4 pm</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <p class="note">Hours can change around holidays, so a quick call before you come is always a good idea.</p>
+    </div>
+  </div>
+</section>
+
+<footer>Sample design prepared for Cardinal Barber Shop - not affiliated with or endorsed by the business.</footer>
+</body>
+</html>

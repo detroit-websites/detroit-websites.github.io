@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awafi Cafe – Yemeni coffee in Hamtramck</title>
+<meta name="description" content="Awafi Cafe on Joseph Campau in Hamtramck: Yemeni coffee, specialty tea, cakes, crepes and pastries, open late. Call (313) 654-4391.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bean:#3A2117;
+  --saffron:#C8922A;
+  --cardamom:#66764F;
+  --rose:#EBD5C6;
+  --glass:#9E3B33;
+  --milk:#FBF5F0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--rose);color:var(--bean);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--saffron);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Gloock",Georgia,serif;font-weight:400;line-height:1.05}
+
+.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:12px}
+.top .n{font-family:"Gloock";font-size:26px;text-decoration:none}
+.top a.t{text-decoration:none;font-weight:600;border-bottom:2px solid var(--saffron);padding-bottom:2px;white-space:nowrap}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:32px 0 96px}
+.arch{position:relative;aspect-ratio:3/4;border-radius:999px 999px 0 0;overflow:hidden;background:var(--bean);
+  box-shadow:0 0 0 10px var(--rose),0 0 0 12px var(--saffron)}
+.arch .fan{position:absolute;inset:0 0 auto 0;height:50%;
+  background:
+   conic-gradient(from 270deg at 50% 100%,var(--glass) 0 18deg,var(--saffron) 18deg 36deg,var(--cardamom) 36deg 54deg,#2f6f73 54deg 72deg,var(--saffron) 72deg 90deg,var(--glass) 90deg 108deg,var(--cardamom) 108deg 126deg,#2f6f73 126deg 144deg,var(--saffron) 144deg 162deg,var(--glass) 162deg 180deg,transparent 180deg);
+  -webkit-mask:radial-gradient(circle at 50% 100%,transparent 0 22%,#000 22.5% 100%);mask:radial-gradient(circle at 50% 100%,transparent 0 22%,#000 22.5% 100%)}
+.arch .lattice{position:absolute;inset:50% 0 0 0;
+  background:
+   repeating-linear-gradient(45deg,transparent 0 22px,rgba(200,146,42,.55) 22px 24px),
+   repeating-linear-gradient(-45deg,transparent 0 22px,rgba(200,146,42,.55) 22px 24px)}
+.arch .cup{position:absolute;left:50%;bottom:14%;transform:translateX(-50%);width:44%;}
+.hero h1{font-size:clamp(60px,9vw,124px)}
+.hero h1 small{display:block;font-family:"Instrument Sans";font-size:clamp(18px,1.8vw,22px);font-weight:500;color:var(--cardamom);margin-top:14px;line-height:1.3}
+.hero p{margin-top:26px;font-size:19px;max-width:30em}
+.hero .open{margin-top:30px;display:inline-block;background:var(--bean);color:var(--milk);padding:14px 24px;border-radius:999px;font-weight:600}
+
+.pour{background:var(--bean);color:var(--milk);padding:104px 0}
+.pour-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:72px;align-items:center}
+.pour h2{font-size:clamp(40px,5.4vw,68px);color:var(--saffron)}
+.pour p{margin-top:22px;max-width:32em;color:#e7d6ca}
+.pour blockquote{font-family:"Gloock";font-size:clamp(26px,3vw,36px);line-height:1.25;border-left:3px solid var(--saffron);padding-left:28px}
+.pour figcaption{margin-top:14px;padding-left:31px;color:#cdb8a8;font-size:15px}
+
+.case{padding:100px 0}
+.case h2{font-size:clamp(40px,5vw,60px);max-width:12em}
+.case .sub{margin-top:14px;max-width:34em}
+.shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px}
+.shelf div{background:var(--milk);border-radius:140px 140px 18px 18px;padding:56px 22px 30px;text-align:center}
+.shelf h3{font-size:28px}
+.shelf p{font-size:15px;margin-top:8px;color:#6b4f42}
+
+.voices{background:var(--milk);padding:100px 0}
+.voices h2{font-size:clamp(38px,4.8vw,56px);text-align:center}
+.v-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px}
+.v-grid blockquote{font-size:19px;line-height:1.5}
+.v-grid figure{text-align:center;padding:0 8px}
+.v-grid figure::before{content:"";display:block;width:36px;height:36px;margin:0 auto 18px;border-radius:999px 999px 0 0;background:var(--saffron)}
+.v-grid figcaption{margin-top:12px;font-size:14px;color:#7a6255}
+.score{text-align:center;margin-top:48px;color:#7a6255}
+
+.visit{padding:100px 0}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.visit h2{font-size:clamp(40px,5vw,60px)}
+.visit address{font-style:normal;font-size:20px;margin-top:22px}
+.visit a.p{display:inline-block;margin-top:16px;font-family:"Gloock";font-size:clamp(32px,4vw,42px);color:var(--glass);text-decoration:none}
+.visit table{width:100%;border-collapse:collapse;font-size:18px}
+.visit td{padding:16px 0;border-bottom:1px solid #c9ab98}
+.visit td:last-child{text-align:right;font-weight:600}
+.visit .ig{display:inline-block;margin-top:18px;font-weight:600}
+footer{text-align:center;font-size:13px;color:#7a6255;padding:0 24px 44px}
+
+@media (max-width:900px){
+  .hero,.pour-grid,.visit-grid{grid-template-columns:1fr}
+  .hero{gap:44px}
+  .arch{max-width:340px;margin:0 auto;width:100%;order:2}
+  .shelf{grid-template-columns:1fr 1fr}
+  .v-grid{grid-template-columns:1fr}
+}
+@media (max-width:480px){.shelf{grid-template-columns:1fr}.top .n{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="n" href="#top">Awafi Cafe</a>
+    <a class="t" href="tel:+13136544391">(313) 654-4391</a>
+  </header>
+  <section class="hero" id="top">
+    <div>
+      <h1>Awafi Cafe<small>Yemeni coffee, tea and sweets on Joseph Campau</small></h1>
+      <p>A bright, welcoming cafe in Hamtramck for Yemeni coffee, fragrant tea, and a dessert case that's hard to walk past. Stay for a booth and a long talk, or take a cake home.</p>
+      <span class="open">Open late, seven days a week</span>
+    </div>
+    <div class="arch" aria-hidden="true">
+      <div class="fan"></div>
+      <div class="lattice"></div>
+      <svg class="cup" viewBox="0 0 120 110"><path d="M18 40h74v22a37 37 0 0 1-74 0z" fill="#FBF5F0"/><path d="M92 46h8a12 12 0 0 1 0 24h-9" fill="none" stroke="#FBF5F0" stroke-width="7"/><path d="M40 8c-6 8 6 12 0 22M56 4c-6 8 6 12 0 22M72 8c-6 8 6 12 0 22" fill="none" stroke="#C8922A" stroke-width="4" stroke-linecap="round"/><rect x="10" y="100" width="90" height="6" rx="3" fill="#C8922A"/></svg>
+    </div>
+  </section>
+</div>
+
+<section class="pour">
+  <div class="wrap pour-grid">
+    <div>
+      <h2>Coffee the Yemeni way</h2>
+      <p>Organic Yemeni coffee, lattes and specialty teas, served in a room that's easy to settle into. Try the mufawwar, or ask what's good today.</p>
+    </div>
+    <figure>
+      <blockquote>“I thought the mufawwar was the best coffee I've ever had.”</blockquote>
+      <figcaption>Guest review, atly</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="case">
+  <div class="wrap">
+    <h2>From the counter</h2>
+    <p class="sub">The menu changes with the season, so stop in and see what's in the case.</p>
+    <div class="shelf">
+      <div><h3>Coffee &amp; tea</h3><p>Yemeni coffee, espresso, lattes, specialty tea</p></div>
+      <div><h3>Cakes</h3><p>Slices, cheesecake, tiramisu and celebration cakes</p></div>
+      <div><h3>Crepes &amp; waffles</h3><p>Sweet and filled, made to order</p></div>
+      <div><h3>Cold drinks</h3><p>Smoothies, milkshakes, frappuccinos and boba</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap">
+    <h2>Why Hamtramck keeps coming back</h2>
+    <div class="v-grid">
+      <figure><blockquote>“A very nice new cafe. Bright and cheery inside. Comfortable background music, not too loud.”</blockquote><figcaption>Tony, Yelp</figcaption></figure>
+      <figure><blockquote>“I'm really loving all the new cafés popping up around Hamtramck, and Awafi is definitely one worth checking out.”</blockquote><figcaption>Tanni, Yelp</figcaption></figure>
+      <figure><blockquote>“I thought the desserts here were the best, perfectly sweet and flavorful.”</blockquote><figcaption>Guest review, atly</figcaption></figure>
+    </div>
+    <p class="score">Rated 4.6 from more than 80 reviews.</p>
+  </div>
+</section>
+
+<section class="visit">
+  <div class="wrap visit-grid">
+    <div>
+      <h2>Come sit a while</h2>
+      <address>9000 Joseph Campau Avenue<br>Hamtramck, Michigan 48212</address>
+      <a class="p" href="tel:+13136544391">(313) 654-4391</a><br>
+      <a class="ig" href="https://www.instagram.com/awaficafe">Follow @awaficafe on Instagram</a>
+    </div>
+    <table aria-label="Opening hours">
+      <tr><td>Monday – Friday</td><td>8:30 am – midnight</td></tr>
+      <tr><td>Saturday – Sunday</td><td>10 am – midnight</td></tr>
+    </table>
+  </div>
+</section>
+<footer>Sample design prepared for Awafi Cafe - not affiliated with or endorsed by the business.</footer>
+</body>
+</html>

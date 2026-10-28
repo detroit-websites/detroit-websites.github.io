@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>State Fair Coney Island | Hazel Park</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Karla:wght@400;500;700&family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1c2741;
+  --navy-2:#253252;
+  --mustard:#e1ae3c;
+  --chili:#a3312b;
+  --tile:#f3f5f6;
+  --steel:#c9cfd6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--tile);color:var(--navy);font:400 17px/1.6 "Karla",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--mustard);outline-offset:3px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+
+.top{background:var(--navy);color:var(--tile)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:16px;gap:12px}
+.top strong{font:400 19px/1 "Alfa Slab One",serif;letter-spacing:.01em}
+.top a{text-decoration:none;font-weight:700;color:var(--mustard)}
+
+.hero{background:var(--navy);color:var(--tile);padding:56px 0 100px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero h1{font:400 clamp(52px,7.4vw,104px)/.95 "Alfa Slab One",serif;color:var(--mustard)}
+.hero h1 small{display:block;font:italic 400 clamp(22px,2.6vw,32px)/1.2 "Fraunces",serif;color:var(--tile);margin-top:18px}
+.hero p{margin-top:24px;font-size:19px;max-width:42ch;color:#d7dce4}
+.hero .btns{margin-top:32px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:15px 26px;border-radius:999px;text-decoration:none;font-weight:700}
+.btn.m{background:var(--mustard);color:var(--navy)}
+.btn.o{border:2px solid var(--tile)}
+.btn:hover{background:var(--chili);color:var(--tile);border-color:var(--chili)}
+
+/* Letterboard */
+.board{background:#15151a;border:14px solid #5a3b22;border-radius:6px;padding:30px 26px;box-shadow:0 40px 70px -30px rgba(0,0,0,.6);
+  background-image:repeating-linear-gradient(0deg,transparent 0 21px,#222229 21px 23px)}
+.board h2{font:700 15px/1 "Karla",sans-serif;letter-spacing:.24em;color:#f1f1f1;text-align:center;margin-bottom:22px}
+.board ul{list-style:none}
+.board li{font:700 clamp(17px,1.9vw,21px)/1 "Karla",monospace;color:#f4f4f4;letter-spacing:.14em;text-transform:uppercase;padding:9px 0;text-align:center}
+.board li.r{color:#f2b9b4}
+
+/* Plate */
+.plate{padding:110px 0 80px}
+.plate .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+.plate h2{font:400 clamp(36px,4.4vw,56px)/1 "Alfa Slab One",serif;color:var(--chili)}
+.plate p{font-size:19px;max-width:56ch}
+.plate p+p{margin-top:16px}
+
+/* Reviews */
+.reviews{padding:30px 0 110px}
+.rating{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;border-top:3px solid var(--navy);padding-top:22px;margin-bottom:46px}
+.rating b{font:400 54px/1 "Alfa Slab One",serif;color:var(--chili)}
+.list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ticket{background:#fff;border:1px solid var(--steel);border-top:8px solid var(--mustard);padding:26px 24px}
+.ticket:nth-child(2n){border-top-color:var(--chili)}
+.ticket p{font:italic 400 21px/1.42 "Fraunces",serif}
+.ticket span{display:block;margin-top:16px;font-size:14px;font-weight:700;color:#5b6477}
+.wide{grid-column:span 2}
+
+/* Visit */
+.visit{background:var(--mustard);padding:90px 0}
+.visit .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.visit h2{font:400 clamp(38px,5vw,64px)/.98 "Alfa Slab One",serif}
+.visit address{font-style:normal;font-size:21px;margin:20px 0 26px}
+.visit .btn.m{background:var(--navy);color:var(--tile)}
+.visit .btn.o{border-color:var(--navy)}
+.note{background:var(--navy);color:var(--tile);padding:30px;border-radius:4px}
+.note h3{font:400 24px/1.1 "Alfa Slab One",serif;color:var(--mustard);margin-bottom:10px}
+
+footer{background:var(--navy);color:#9ea7b8;text-align:center;font-size:13px;padding:26px 0}
+
+@media (max-width:880px){
+  .hero .wrap,.plate .wrap,.visit .wrap{grid-template-columns:1fr;gap:44px}
+  .list{grid-template-columns:1fr}
+  .wide{grid-column:auto}
+  .plate{padding:76px 0 56px}
+  .hero{padding:44px 0 72px}
+}
+@media (max-width:420px){.wrap{padding:0 18px}.board{border-width:10px;padding:22px 12px}.board li{letter-spacing:.08em}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">
+  <strong>State Fair Coney Island</strong>
+  <a href="tel:+12485413620">(248) 541-3620</a>
+</div></div>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>The coney on John R.<small>Breakfast and lunch, made to order, the Detroit way.</small></h1>
+      <p>Coney dogs, chili cheese fries, chicken pitas and fried fish straight from the fryer. Sit down at the counter or call ahead for carryout.</p>
+      <div class="btns">
+        <a class="btn m" href="tel:+12485413620">Call for carryout</a>
+        <a class="btn o" href="#visit">Find us</a>
+      </div>
+    </div>
+    <div class="board" aria-label="Customer favorites">
+      <h2>REGULARS ORDER</h2>
+      <ul>
+        <li>Coney dogs</li>
+        <li class="r">Chili cheese fries</li>
+        <li>Burgers</li>
+        <li>Chicken pita</li>
+        <li class="r">Fish &amp; grits breakfast</li>
+        <li>Fried fish carryout</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="plate">
+  <div class="wrap">
+    <h2>A neighborhood counter that never got fancy about the food.</h2>
+    <div>
+      <p>State Fair Coney Island is the kind of place you stop on the way to work and come back to at lunch. The grill is right there, the fish goes from the fryer to your container, and the coney is the reason people drive over.</p>
+      <p>Dine in, take it to go, or call ahead and we'll have it ready.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="rating"><b>4.7</b><span>stars across 157 ratings</span></div>
+    <div class="list">
+      <div class="ticket wide"><p>“Best coney on 8 mile hands down!! Need a spot to have a quick bite this is is it!!”</p><span>Claude, Yelp</span></div>
+      <div class="ticket"><p>“The fish and grits breakfast was great.”</p><span>Customer review</span></div>
+      <div class="ticket"><p>“As I watch them cooking try fish, they took it straight from the fryer to my container for carryout.”</p><span>Tony, Yelp</span></div>
+      <div class="ticket"><p>“Place is still great come support this local gem!”</p><span>Frederick, Yelp</span></div>
+      <div class="ticket"><p>“The food here is delicious and made with care.”</p><span>Customer review</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div>
+      <h2>Come hungry.</h2>
+      <address>20731 John R Rd<br>Hazel Park, MI 48030</address>
+      <div class="btns" style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn m" href="tel:+12485413620">(248) 541-3620</a>
+        <a class="btn o" href="https://www.google.com/maps/search/?api=1&amp;query=State%20Fair%20Coney%20Island%2020731%20John%20R%20Rd%20Hazel%20Park%20MI%2048030">Directions</a>
+      </div>
+    </div>
+    <div class="note">
+      <h3>Hours</h3>
+      <p>Open Monday through Saturday from 7 am for breakfast and lunch. Closed Sunday. Call for today's closing time.</p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Sample design prepared for State Fair Coney Island - not affiliated with or endorsed by the business.</div></footer>
+</body>
+</html>
